@@ -1,0 +1,66 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Đăng ký tài khoản";
+}
+
+<link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+<div>
+    <div class="register_form">
+        <h5>@ViewData["Title"]</h5>
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                <label asp-for="Input.Email" class="form-label">Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FullName" class="form-control" autocomplete="username" aria-required="true" placeholder="Họ và tên" />
+                <label asp-for="Input.FullName" class="form-label">Họ và tên</label>
+                <span asp-validation-for="Input.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.DateBirth" class="form-control" autocomplete="username" aria-required="true" placeholder="Ngày tháng năm sinh" />
+                <label asp-for="Input.DateBirth" class="form-label">Ngày tháng năm sinh</label>
+                <span asp-validation-for="Input.DateBirth" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Phone" class="form-control" autocomplete="username" aria-required="true" placeholder="Số điện thoại" />
+                <label asp-for="Input.Phone" class="form-label">Số điện thoại</label>
+                <span asp-validation-for="Input.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Address" class="form-control" autocomplete="username" aria-required="true" placeholder="Địa chỉ" />
+                <label asp-for="Input.Address" class="form-label">Địa chỉ</label>
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.City" class="form-control" autocomplete="username" aria-required="true" placeholder="Thành phố" />
+                <label asp-for="Input.City" class="form-label">Thành phố</label>
+                <span asp-validation-for="Input.City" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Country" class="form-control" autocomplete="username" aria-required="true" placeholder="Quốc gia" />
+                <label asp-for="Input.Country" class="form-label">Quốc gia</label>
+                <span asp-validation-for="Input.Country" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Mật khẩu" />
+                <label asp-for="Input.Password" class="form-label">Mật khẩu</label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Xác nhận mật khẩu" />
+                <label asp-for="Input.ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Đăng ký</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

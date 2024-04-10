@@ -1,0 +1,60 @@
+﻿div.side_1 {
+    display : inline-block;
+}
+div.side_2 {
+    display : inline-block;
+    margin-left : 50px;
+}
+div.info_table {
+    border : 1px solid rgb(145 141 141 / 0.44);
+    padding: 50px;
+    background-color: white;
+}
+div.id p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.fullname p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.country p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.email p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.phone p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.address p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.city p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+div.birthdate p {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}

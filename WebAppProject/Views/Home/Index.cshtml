@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/Home_Index.css" asp-append-version="true" />
+<div class="info_table">
+    <div class="side_1">
+        <div class="id">
+            <h6>ID CODE</h6>
+            <p>@ViewData["Id"]</p>
+        </div>
+        <div class="email">
+            <h6>EMAIL</h6>
+            <p>@ViewData["Email"]</p>
+        </div>
+        <div class="fullname">
+            <h6>HỌ VÀ TÊN</h6>
+            <p>@ViewData["FullName"]</p>
+        </div>
+        <div class="phone">
+            <h6>SỐ ĐIỆN THOẠI</h6>
+            <p>@ViewData["Phone"]</p>
+        </div>
+    </div>
+    <div class="side_2">
+        <div class="address">
+            <h6>ĐỊA CHỈ</h6>
+            <p>@ViewData["Address"]</p>
+        </div>
+        <div class="city">
+            <h6>THÀNH PHỐ</h6>
+            <p>@ViewData["City"]</p>
+        </div>
+        <div class="country">
+            <h6>QUỐC GIA</h6>
+            <p>@ViewData["Country"]</p>
+        </div>
+        <div class="birthdate">
+            <h6>NGÀY SINH</h6>
+            <p>@ViewData["BirthDate"]</p>
+        </div>
+    </div>
+</div>
+

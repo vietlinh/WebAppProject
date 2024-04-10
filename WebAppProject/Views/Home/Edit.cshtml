@@ -1,0 +1,42 @@
+﻿@model WebAppProject.Areas.Identity.Data.AppUser
+@{
+    ViewData["Title"] = "Edit";
+}
+<link rel="stylesheet" href="~/css/HomeEdit.css" asp-append-version="true" />
+<h5>Edit</h5>
+<div class="info_table">
+    <form asp-action="Edit" method="post">
+    <div class="side_1">
+        <div class="fullname">
+            <h6>HỌ VÀ TÊN</h6>
+            <input asp-for="FullName" />
+        </div>
+        <div class="phone">
+            <h6>SỐ ĐIỆN THOẠI</h6>
+            <input asp-for="Phone" />
+        </div>
+        <div class="address">
+            <h6>ĐỊA CHỈ</h6>
+            <input asp-for="Address" />
+        </div>
+    </div>
+    <div class="side_2">
+        <div class="city">
+            <h6>THÀNH PHỐ</h6>
+            <input asp-for="City" />
+        </div>
+        <div class="country">
+            <h6>QUỐC GIA</h6>
+            <input asp-for="Country" />
+        </div>
+        <div class="birthdate">
+            <h6>NGÀY SINH</h6>
+            <input asp-for="DateBirth" />
+        </div>
+    </div>
+    <div class="button_submit">
+        <input type="submit" value="save" class="btn btn-primary" />
+    </div>
+    </form>
+</div>
+

@@ -1,0 +1,27 @@
+﻿div.login_form {
+    width : 35%;
+    margin-left: 420px;
+    margin-top : 100px;
+    border : 1px solid black;
+    padding : 50px;
+    background-color: white;
+}
+div.login_form h5 {
+    margin-left: 130px;
+    margin-bottom : 15px;
+    font-weight: 500;
+    color: #0d6efd;
+}
+div.login_form_bottom {
+    margin-top : 10px;
+}
+div.login_form_bottom p a  {
+    text-decoration : none;
+    color: red;
+    font-weight: 500;
+}
+div.login_form_bottom p {
+    display : inline-block;
+    margin-right: 50px;
+}
+
