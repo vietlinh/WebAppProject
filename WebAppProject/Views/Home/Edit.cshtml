@@ -7,35 +7,41 @@
 <div class="info_table">
     <form asp-action="Edit" method="post">
     <div class="side_1">
-        <div class="fullname">
-            <h6>HỌ VÀ TÊN</h6>
-            <input asp-for="FullName" />
+        <div class="fullname form-floating">
+            <input asp-for="FullName" class="form-control" name="FullName" id="FullName"/>
+            <label for="FullName">Họ và tên</label>
         </div>
-        <div class="phone">
-            <h6>SỐ ĐIỆN THOẠI</h6>
-            <input asp-for="Phone" />
+        <br />
+        <div class="phone form-floating">
+            <input asp-for="Phone" class="form-control" name="Phone" id="Phone"/>
+            <label for="Phoen">Số điện thoại</label>
         </div>
-        <div class="address">
-            <h6>ĐỊA CHỈ</h6>
-            <input asp-for="Address" />
+        <br />
+        <div class="address form-floating">
+            <input asp-for="Address" class="form-control" name="Address" id="Address"/>
+            <label for="Address">Địa chỉ</label>
         </div>
+        <br />
     </div>
     <div class="side_2">
-        <div class="city">
-            <h6>THÀNH PHỐ</h6>
-            <input asp-for="City" />
+        <div class="city form-floating">
+            <input asp-for="City"class="form-control" name="City" id="City"/>
+            <label for="City">Thành phố</label>
         </div>
-        <div class="country">
-            <h6>QUỐC GIA</h6>
-            <input asp-for="Country" />
+        <br />
+        <div class="country form-floating">
+            <input asp-for="Country"class="form-control" name="Country" id="Country" />
+            <label for="Country">Quốc gia</label>
         </div>
-        <div class="birthdate">
-            <h6>NGÀY SINH</h6>
-            <input asp-for="DateBirth" />
+        <br />
+        <div class="birthdate form-floating">
+            <input asp-for="DateBirth" class="form-control" name="DateBirth" id="DateBirth"/>
+            <label for="DateBirth">Ngày tháng năm sinh</label>
         </div>
+        <br />
     </div>
     <div class="button_submit">
-        <input type="submit" value="save" class="btn btn-primary" />
+        <input type="submit" value="Lưu" class="btn btn-primary" />
     </div>
     </form>
 </div>
