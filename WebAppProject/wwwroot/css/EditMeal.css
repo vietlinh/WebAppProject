@@ -1,0 +1,43 @@
+﻿div.nav_bar_list ul li a {
+    color: black;
+}
+div.nav_bar_list ul li a:hover {
+    color: blue;
+}
+div.nav_bar_list ul {
+    list-style-type: none;
+}
+
+div.nav_bar_list li {
+    display: inline-block;
+}
+
+div.nav_bar {
+    padding: 5px 5px;
+    border: 1px black solid;
+    background-color: white;
+}
+div.table_1 {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 150px;
+    margin-top : 25px;
+}
+div.table_2 {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+div.table_3 {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+div.display_db {
+    background-color: white;
+    border : 1px black solid;
+    margin-top : 25px;
+}
+

@@ -1,0 +1,13 @@
+﻿
+div.display_data {
+    background-color: white;
+    margin-top: 50px;
+    border: 3px solid rgb(8, 158, 204);
+    border-radius: 20px;
+}
+div.register_meal {
+    padding : 20px;
+    background-color : white;
+    border-radius : 20px;
+    border: 2px solid rgb(8, 158, 204);
+}

@@ -1,0 +1,197 @@
+﻿@using WebAppProject.ViewModels
+@model MealMenuVM
+
+<link rel="stylesheet" href="~/css/MealMenuIndex.css" asp-append-version="true" />
+
+<div class="register_meal">
+
+</div>
+
+<div class="display_data">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Thứ 2</th>
+                <th>Thứ 3</th>
+                <th>Thứ 4</th>
+                <th>Thứ 5</th>
+                <th>Thứ 6</th>
+                <th>Thứ 7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Món Chính</td>
+                <td>
+                    @foreach (var meal in Model.MainMeal)
+                {
+                    if (meal.Day == "Thứ 2")
+                    {
+                        <p>@meal.Name</p>
+                    }
+                }
+                </td>
+                <td>
+                    @foreach (var meal in Model.MainMeal)
+                    {
+                        if (meal.Day == "Thứ 3")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.MainMeal)
+                    {
+                        if (meal.Day == "Thứ 4")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.MainMeal)
+                    {
+                        if (meal.Day == "Thứ 5")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.MainMeal)
+                    {
+                        if (meal.Day == "Thứ 6")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.MainMeal)
+                    {
+                        if (meal.Day == "Thứ 7")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Món phụ</td>
+                <td>
+                    @foreach (var meal in Model.SideMeal)
+                {
+                    if (meal.Day == "Thứ 2")
+                    {
+                        <p>@meal.Name</p>
+                    }
+                }
+                </td>
+                <td>
+                    @foreach (var meal in Model.SideMeal)
+                    {
+                        if (meal.Day == "Thứ 3")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.SideMeal)
+                    {
+                        if (meal.Day == "Thứ 4")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.SideMeal)
+                    {
+                        if (meal.Day == "Thứ 5")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.SideMeal)
+                    {
+                        if (meal.Day == "Thứ 6")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.SideMeal)
+                    {
+                        if (meal.Day == "Thứ 7")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Món cơ bản</td>
+                <td>
+                    @foreach (var meal in Model.BasicMeal)
+                    {
+                        if (meal.Day == "Thứ 2")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.BasicMeal)
+                    {
+                        if (meal.Day == "Thứ 3")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.BasicMeal)
+                    {
+                        if (meal.Day == "Thứ 4")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.BasicMeal)
+                    {
+                        if (meal.Day == "Thứ 5")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.BasicMeal)
+                    {
+                        if (meal.Day == "Thứ 6")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @foreach (var meal in Model.BasicMeal)
+                    {
+                        if (meal.Day == "Thứ 7")
+                        {
+                            <p>@meal.Name</p>
+                        }
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

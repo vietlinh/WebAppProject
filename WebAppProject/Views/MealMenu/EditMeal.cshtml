@@ -1,0 +1,104 @@
+﻿@using WebAppProject.ViewModels
+@model MealMenuVM
+
+<link rel="stylesheet" href="~/css/EditMeal.css" asp-append-version="true" />
+
+<div class="nav_bar">
+    <div class="nav_bar_list">
+        <ul>
+            <li>
+                <a class="nav-link text-dark" asp-controller="MealMenu" asp-action="CreateBasicMeal">Thêm món cơ bản</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-controller="MealMenu" asp-action="CreateMainMeal">Thêm món chính</a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" asp-controller="MealMenu" asp-action="CreateSideMeal">Thêm món phụ</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="display_db">
+    <div class="table_1">
+        <h5>Bảng món cơ bản</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Thứ</th>
+                    <th>Món</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var data in Model.BasicMeal)
+                {
+                    <tr>
+                        <th>@data.Id</th>
+                        <th>@data.Day</th>
+                        <th>@data.Name</th>
+                        <th>
+                            <form asp-action="BasicMealDelete" method="post" asp-route-id="@data.Id">
+                                <input type="submit" class="btn btn-danger" value="Xóa" />
+                            </form>
+                        </th
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="table_2">
+        <h5>Bảng món chính</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Thứ</th>
+                    <th>Món</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var data in Model.MainMeal)
+                {
+                    <tr>
+                        <th>@data.Id</th>
+                        <th>@data.Day</th>
+                        <th>@data.Name</th>
+                        <th>
+                            <form asp-action="MainMealDelete" method="post" asp-route-id="@data.Id">
+                                <input type="submit" class="btn btn-danger" value="Xóa" />
+                            </form>
+                        </th
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="table_3">
+        <h5>Bảng món phụ</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Thứ</th>
+                    <th>Món</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var data in Model.SideMeal)
+                {
+                    <tr>
+                        <th>@data.Id</th>
+                        <th>@data.Day</th>
+                        <th>@data.Name</th>
+                        <th>
+                            <form asp-action="SideMealDelete" method="post" asp-route-id="@data.Id">
+                                <input type="submit" class="btn btn-danger" value="Xóa" />
+                            </form>
+                        </th
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

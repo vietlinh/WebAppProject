@@ -1,0 +1,19 @@
+﻿@model WebAppProject.Models.SideMeal
+
+<div class="create_form">
+    <form asp-action="CreateSideMeal" method="post">
+        <div class="form-floating">
+            <input asp-for="Day" class="form-control" name="Day" id="Day" />
+            <label for="Day">Thứ</label>
+        </div>
+        <br />
+        <div class="form-floating">
+            <input asp-for="Name" class="form-control" name="Name" id="Name" />
+            <label for="Name">Tên món</label>
+        </div>
+        <br />
+        <div class="button_submit">
+            <input type="submit" value="Tạo" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

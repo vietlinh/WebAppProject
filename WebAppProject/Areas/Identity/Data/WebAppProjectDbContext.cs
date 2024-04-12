@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebAppProject.Areas.Identity.Data;
+using WebAppProject.Models;
 
 namespace WebAppProject.Areas.Identity.Data;
 
@@ -11,7 +12,9 @@ public class WebAppProjectDbContext : IdentityDbContext<AppUser>
         : base(options)
     {
     }
-
+    public DbSet<BasicMeal> basicMeals { get; set; }
+    public DbSet<SideMeal> sideMeals { get; set; }
+    public DbSet<MainMeal> mainMeals { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAppProject.Areas.Identity.Data;
 
@@ -11,9 +12,11 @@ using WebAppProject.Areas.Identity.Data;
 namespace WebAppProject.Migrations
 {
     [DbContext(typeof(WebAppProjectDbContext))]
-    partial class WebAppProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240411072148_Meal_update")]
+    partial class Meal_update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
