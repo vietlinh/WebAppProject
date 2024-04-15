@@ -7,7 +7,7 @@ using WebAppProject.ViewModels;
 
 namespace WebAppProject.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class MealMenuController : Controller
     {
         private readonly WebAppProjectDbContext _context;

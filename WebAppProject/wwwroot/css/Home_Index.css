@@ -9,7 +9,7 @@ div.info_table {
     border: 3px solid rgb(8, 158, 204);
     padding: 50px;
     background-color: white;
-    border-radius : 20px;
+    border-radius: 20px;
 }
 div.id p {
     border: 1px rgb(8, 158, 204) solid;
@@ -82,5 +82,12 @@ div.address h6 {
 }
 div.email h6 {
     color: rgb(101, 102, 244);
+}
+div.profile_image {
+    display : inline-block;
+}
+div.profile_image img {
+    margin-left: 300px;
+    vertical-align : bottom;
 }
 
