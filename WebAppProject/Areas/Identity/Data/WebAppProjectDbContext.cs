@@ -15,6 +15,7 @@ public class WebAppProjectDbContext : IdentityDbContext<AppUser>
     public DbSet<BasicMeal> basicMeals { get; set; }
     public DbSet<SideMeal> sideMeals { get; set; }
     public DbSet<MainMeal> mainMeals { get; set; }
+    public DbSet<RegisterMealInfo> registerMealInfos { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

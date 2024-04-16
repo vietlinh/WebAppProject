@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAppProject.Areas.Identity.Data;
@@ -7,21 +8,66 @@ using WebAppProject.ViewModels;
 
 namespace WebAppProject.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class MealMenuController : Controller
     {
         private readonly WebAppProjectDbContext _context;
-        public MealMenuController(WebAppProjectDbContext context)
+        private readonly UserManager<AppUser> _userManager;
+        public MealMenuController(WebAppProjectDbContext context, UserManager<AppUser> userManager)
         {
-            _context  = context;    
+            _context = context;
+            _userManager = userManager;
         }
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            var register_user = _context.registerMealInfos.FirstOrDefault(u => u.Id_user == user.Id);
+
+            MealMenuVM mealmenu = new MealMenuVM();
+            mealmenu.SideMeal = await _context.sideMeals.ToListAsync();
+            mealmenu.MainMeal = await _context.mainMeals.ToListAsync();
+            mealmenu.BasicMeal = await _context.basicMeals.ToListAsync();
+
+            if (register_user != null)
+            {
+                mealmenu.Monday = register_user.Monday;
+                mealmenu.Tuesday = register_user.Tuesday;
+                mealmenu.Wednesday = register_user.Wednesday;
+                mealmenu.Thursday = register_user.Thursday;
+                mealmenu.Friday = register_user.Friday;
+            }
+
+            return View(mealmenu);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Index(RegisterMealInfo register_user)  
+        {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            var existingUser = _context.registerMealInfos.FirstOrDefault(u => u.Id_user == user.Id); 
+
+            if (existingUser != null)
+            {
+                existingUser.Monday = register_user.Monday;
+                existingUser.Tuesday = register_user.Tuesday;
+                existingUser.Wednesday = register_user.Wednesday;
+                existingUser.Thursday = register_user.Thursday;
+                existingUser.Friday = register_user.Friday;
+            }
+            else
+            {
+                register_user.FullName = user.FullName;
+                register_user.Id_user = user.Id;
+                _context.Add(register_user);
+            }
+
+            await _context.SaveChangesAsync();
             MealMenuVM mealmenu = new MealMenuVM();
             mealmenu.SideMeal = await _context.sideMeals.ToListAsync();
             mealmenu.MainMeal = await _context.mainMeals.ToListAsync();
             mealmenu.BasicMeal = await _context.basicMeals.ToListAsync();
             return View(mealmenu);
+
         }
         public IActionResult CreateMainMeal()
         {

@@ -7,30 +7,35 @@
     <p>
         @{
             DateTime now = DateTime.Now;
-            @now.DayOfWeek;
+                        @now.DayOfWeek;
         }
     </p>
     <h5>Đăng ký cơm trưa</h5>
+    <form asp-action="Index" method="post">
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <input asp-for="Monday" class="form-check-input" type="checkbox" id="monday" value="true" >
         <label class="form-check-label" for="inlineCheckbox1">Thứ 2</label>
     </div>
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <input asp-for="Tuesday" class="form-check-input" type="checkbox" id="tuesday" value="true" >
         <label class="form-check-label" for="inlineCheckbox2">Thứ 3</label>
     </div>
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <input asp-for="Wednesday" class="form-check-input" type="checkbox" id="wednesday" value="true">
         <label class="form-check-label" for="inlineCheckbox1">Thứ 4</label>
     </div>
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <input asp-for="Thursday" class="form-check-input" type="checkbox" id="thursday" value="true" >
         <label class="form-check-label" for="inlineCheckbox2">Thứ 5</label>
     </div>
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <input asp-for="Friday" class="form-check-input" type="checkbox" id="friday" value="true" >
         <label class="form-check-label" for="inlineCheckbox1">Thứ 6</label>
     </div>
+    <div>
+        <input type="submit" value="Lưu" class="btn btn-primary" />
+    </div>
+    </form>
 </div>
 
 <div class="display_data">
@@ -221,3 +226,40 @@
         </tbody>
     </table>
 </div>
+
+
+<script>
+    var date = new Date();
+    const currentdayofweek = date.getDay();
+    if (currentdayofweek >= 1) {
+        document.getElementById("monday").disabled = true;
+    }
+    else {
+        document.getElementById("monday").disabled = false;
+    }
+    if (currentdayofweek >= 2) {
+        document.getElementById("tuesday").disabled = true;
+    }
+    else {
+        document.getElementById("tuesday").disabled = false;
+    }
+    if (currentdayofweek >= 3) {
+        document.getElementById("wednesday").disabled = true;
+    }
+    else {
+        document.getElementById("wednesday").disabled = false;
+    }
+    if (currentdayofweek >= 4) {
+        document.getElementById("thursday").disabled = true;
+    }
+    else {
+        document.getElementById("thursday").disabled = false;
+    }
+    if (currentdayofweek >= 5) {
+        document.getElementById("friday").disabled = true;
+    }
+    else {
+        document.getElementById("friday").disabled = false;
+    }
+
+</script>
