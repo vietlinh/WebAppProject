@@ -69,10 +69,13 @@ namespace WebAppProject.Controllers
             return View(mealmenu);
 
         }
+        [Authorize(Roles = "Admin")]
+
         public IActionResult CreateMainMeal()
         {
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateMainMeal(MainMeal mainmeal) 
         {
@@ -84,10 +87,12 @@ namespace WebAppProject.Controllers
             }
             return View(mainmeal);
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateBasicMeal()
         {
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateBasicMeal(BasicMeal basicmeal)
         {
@@ -99,10 +104,12 @@ namespace WebAppProject.Controllers
             }
             return View(basicmeal);
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateSideMeal()
         {
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateSideMeal(SideMeal sidemeal)
         {
@@ -114,7 +121,7 @@ namespace WebAppProject.Controllers
             }
             return View(sidemeal);
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditMeal()
         {
             MealMenuVM mealmenu1 = new MealMenuVM();
@@ -123,6 +130,7 @@ namespace WebAppProject.Controllers
             mealmenu1.BasicMeal = await _context.basicMeals.ToListAsync();
             return View(mealmenu1);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> BasicMealDelete(int id)
         {
@@ -137,6 +145,7 @@ namespace WebAppProject.Controllers
             return RedirectToAction(nameof(EditMeal));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> MainMealDelete(int id)
         {
@@ -151,6 +160,7 @@ namespace WebAppProject.Controllers
                 return RedirectToAction(nameof(EditMeal));
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> SideMealDelete(int id)
         {

@@ -19,5 +19,19 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/012/847/559/large_2x/minimal-background-dark-blue-and-light-blue-with-a-line-suitable-for-design-needs-display-website-ui-and-others-free-photo.jpg");
+    background-color: #ebeefd;
+}
+nav.navbar {
+    background-color: white !important;
+}
+footer {
+    background-color: white !important;
+}
+#ul_nav_bar li a {
+    color: black;
+    background-color: white;
+}
+#ul_nav_bar li a:hover {
+    background-color: rgb(44, 169, 97, 0.84);
+    color: white;
 }

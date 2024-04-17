@@ -6,88 +6,118 @@ div.side_2 {
     margin-left : 50px;
 }
 div.info_table {
-    border: 3px solid rgb(8, 158, 204);
+    border: 3px solid white;
     padding: 50px;
     background-color: white;
     border-radius: 20px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 div.id p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
+    color: black;
 }
 div.fullname p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
+    font-size: 16px;
 }
 div.country p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
 }
 div.email p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
 }
 div.phone p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
 }
 div.address p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
 }
 div.city p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
 }
 div.birthdate p {
-    border: 1px rgb(8, 158, 204) solid;
+    border: 3px rgb(44, 169, 97, 0.84) solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
+    color: black;
 }
 div.id h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.fullname h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.country h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.city h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.phone h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.birthdate h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.address h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.email h6 {
-    color: rgb(101, 102, 244);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
 }
 div.profile_image {
     display : inline-block;
+    
 }
 div.profile_image img {
     margin-left: 300px;
     vertical-align : bottom;
+    border : 3px solid rgb(44, 169, 97, 0.84);
+    padding: 70px;
+
 }
 

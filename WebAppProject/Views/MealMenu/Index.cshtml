@@ -4,12 +4,6 @@
 <link rel="stylesheet" href="~/css/MealMenuIndex.css" asp-append-version="true" />
 
 <div class="register_meal">
-    <p>
-        @{
-            DateTime now = DateTime.Now;
-                        @now.DayOfWeek;
-        }
-    </p>
     <h5>Đăng ký cơm trưa</h5>
     <form asp-action="Index" method="post">
     <div class="form-check form-check-inline">
@@ -32,7 +26,7 @@
             <input asp-for="Friday" class="form-check-input" type="checkbox" id="friday" value="true" >
         <label class="form-check-label" for="inlineCheckbox1">Thứ 6</label>
     </div>
-    <div>
+    <div class="form-check-inline">
         <input type="submit" value="Lưu" class="btn btn-primary" />
     </div>
     </form>
@@ -53,7 +47,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Món Chính</td>
+                <td style="font-weight:700;">Món Chính</td>
                 <td>
                     @foreach (var meal in Model.MainMeal)
                 {
@@ -110,7 +104,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Món phụ</td>
+                <td style="font-weight:700;">Món phụ</td>
                 <td>
                     @foreach (var meal in Model.SideMeal)
                 {
@@ -167,7 +161,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Món cơ bản</td>
+                <td style="font-weight:700;">Món cơ bản</td>
                 <td>
                     @foreach (var meal in Model.BasicMeal)
                     {

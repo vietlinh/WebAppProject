@@ -2,15 +2,16 @@
     width : 35%;
     margin-left: 420px;
     margin-top : 100px;
-    border : 1px solid black;
+    border : 1px solid white;
     padding : 50px;
     background-color: white;
+    border-radius : 15px;
 }
 div.login_form h5 {
-    margin-left: 130px;
+    margin-left: 120px;
     margin-bottom : 15px;
-    font-weight: 500;
-    color: #0d6efd;
+    font-weight: 700;
+    color: rgb(44, 169, 97, 0.84);
 }
 div.login_form_bottom {
     margin-top : 10px;
@@ -20,8 +21,16 @@ div.login_form_bottom p a  {
     color: red;
     font-weight: 500;
 }
+div.login_form_bottom p a:hover {
+    color: darkred;
+}
 div.login_form_bottom p {
-    display : inline-block;
     margin-right: 50px;
+}
+#email_input {
+    border-color: green !important;
+}
+#password_input {
+    border-color: green !important;
 }
 

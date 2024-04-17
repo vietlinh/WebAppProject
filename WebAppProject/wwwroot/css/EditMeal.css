@@ -1,33 +1,38 @@
 ﻿div.nav_bar_list ul li a {
     color: black;
+    font-weight: 500;
+    font-size: 18px;
 }
 div.nav_bar_list ul li a:hover {
-    color: blue;
+    color: rgb(44, 169, 97, 0.84) !important;
 }
 div.nav_bar_list ul {
     list-style-type: none;
 }
 
-div.nav_bar_list li {
+div.nav_bar_list ul li {
     display: inline-block;
 }
 
 div.nav_bar {
     padding: 5px 5px;
-    border: 1px black solid;
+    border: 1px white solid;
     background-color: white;
+    border-radius: 20px;
 }
 div.table_1 {
     display: inline-block;
     vertical-align: top;
     margin-left: 150px;
     margin-top : 25px;
+    border-right: 1px black solid;
 }
 div.table_2 {
     display: inline-block;
     vertical-align: top;
     margin-left: 50px;
     margin-top: 25px;
+    border-right: 1px black solid;
 }
 div.table_3 {
     display: inline-block;
@@ -37,7 +42,8 @@ div.table_3 {
 }
 div.display_db {
     background-color: white;
-    border : 1px black solid;
+    border : 1px white solid;
     margin-top : 25px;
+    border-radius: 20px;
 }
 

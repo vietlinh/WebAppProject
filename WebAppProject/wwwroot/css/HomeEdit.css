@@ -1,6 +1,6 @@
 ﻿div.info_table {
     padding: 40px;
-    border: 3px solid rgb(8, 158, 204);
+    border: 3px solid white;
     background-color: white;
     border-radius: 20px;
 }
@@ -11,20 +11,36 @@ div.side_2 {
     width: 35%;
 }
 div.fullname label {
-    color: rgb(8, 158, 204);
+    color: rgb(44, 169, 97, 0.84);
+    font-size: 18px;
+    font-weight: 500;
 }
 div.phone label {
-    color: rgb(8, 158, 204);
+    color: rgb(44, 169, 97, 0.84);
+    font-size: 18px;
+    font-weight: 500;
 }
 div.address label {
-    color: rgb(8, 158, 204);
+    color: rgb(44, 169, 97, 0.84);
+    font-size: 18px;
+    font-weight: 500;
 }
 div.country label {
-    color: rgb(8, 158, 204);
+    color: rgb(44, 169, 97, 0.84);
+    font-size: 18px;
+    font-weight: 500;
 }
 div.city label {
-    color: rgb(8, 158, 204);
+    color: rgb(44, 169, 97, 0.84);
+    font-size: 18px;
+    font-weight: 500;
 }
 div.birthdate label {
-    color: rgb(8, 158, 204);
+    color: rgb(44, 169, 97, 0.84);
+    font-size: 18px;
+    font-weight: 500;
+}
+div.button_submit input {
+    background-color: rgb(44, 169, 97, 0.84);
+    border-color: rgb(44, 169, 97, 0.84);
 }
