@@ -5,6 +5,8 @@
 
 <div class="register_meal">
     <h5>Đăng ký cơm trưa</h5>
+    <p> Mã ID:  @Model.user_id</p>
+    <p> Nhân viên : @Model.user_name</p>
     <form asp-action="Index" method="post">
     <div class="form-check form-check-inline">
             <input asp-for="Monday" class="form-check-input" type="checkbox" id="monday" value="true" >
@@ -27,7 +29,7 @@
         <label class="form-check-label" for="inlineCheckbox1">Thứ 6</label>
     </div>
     <div class="form-check-inline">
-        <input type="submit" value="Lưu" class="btn btn-primary" />
+        <input type="submit" value="Lưu" class="btn btn-primary" id="submit_button" />
     </div>
     </form>
 </div>

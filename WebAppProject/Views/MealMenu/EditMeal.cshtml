@@ -20,85 +20,93 @@
 </div>
 
 <div class="display_db">
-    <div class="table_1">
-        <h5>Bảng món cơ bản</h5>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Thứ</th>
-                    <th>Món</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model.BasicMeal)
-                {
-                    <tr>
-                        <th>@data.Id</th>
-                        <th>@data.Day</th>
-                        <th>@data.Name</th>
-                        <th>
-                            <form asp-action="BasicMealDelete" method="post" asp-route-id="@data.Id">
-                                <input type="submit" class="btn btn-danger" value="Xóa" />
-                            </form>
-                        </th
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-    <div class="table_2">
-        <h5>Bảng món chính</h5>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Thứ</th>
-                    <th>Món</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model.MainMeal)
-                {
-                    <tr>
-                        <th>@data.Id</th>
-                        <th>@data.Day</th>
-                        <th>@data.Name</th>
-                        <th>
-                            <form asp-action="MainMealDelete" method="post" asp-route-id="@data.Id">
-                                <input type="submit" class="btn btn-danger" value="Xóa" />
-                            </form>
-                        </th
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-    <div class="table_3">
-        <h5>Bảng món phụ</h5>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Thứ</th>
-                    <th>Món</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model.SideMeal)
-                {
-                    <tr>
-                        <th>@data.Id</th>
-                        <th>@data.Day</th>
-                        <th>@data.Name</th>
-                        <th>
-                            <form asp-action="SideMealDelete" method="post" asp-route-id="@data.Id">
-                                <input type="submit" class="btn btn-danger" value="Xóa" />
-                            </form>
-                        </th
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-4">
+            <div class="table_1">
+                <h5>Bảng món cơ bản</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Thứ</th>
+                            <th>Món</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var data in Model.BasicMeal)
+                        {
+                            <tr>
+                                <th>@data.Id</th>
+                                <th>@data.Day</th>
+                                <th>@data.Name</th>
+                                <th>
+                                    <form asp-action="BasicMealDelete" method="post" asp-route-id="@data.Id">
+                                        <input type="submit" class="btn btn-danger" value="Xóa" />
+                                    </form>
+                                </th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="table_2">
+                <h5>Bảng món chính</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Thứ</th>
+                            <th>Món</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var data in Model.MainMeal)
+                        {
+                            <tr>
+                                <th>@data.Id</th>
+                                <th>@data.Day</th>
+                                <th>@data.Name</th>
+                                <th>
+                                    <form asp-action="MainMealDelete" method="post" asp-route-id="@data.Id">
+                                        <input type="submit" class="btn btn-danger" value="Xóa" />
+                                    </form>
+                                </th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="table_3">
+                <h5>Bảng món phụ</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Thứ</th>
+                            <th>Món</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var data in Model.SideMeal)
+                        {
+                            <tr>
+                                <th>@data.Id</th>
+                                <th>@data.Day</th>
+                                <th>@data.Name</th>
+                                <th>
+                                    <form asp-action="SideMealDelete" method="post" asp-route-id="@data.Id">
+                                        <input type="submit" class="btn btn-danger" value="Xóa" />
+                                    </form>
+                                </th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>

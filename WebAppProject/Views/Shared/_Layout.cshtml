@@ -1,4 +1,8 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity
+@using WebAppProject.Areas.Identity.Data
+
+@inject SignInManager<AppUser> SignInManager
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,27 +17,30 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: rgb(44, 169, 97, 0.84);">WebAppProject</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: rgb(44, 169, 97, 0.84);">COMVANPHONG</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="nav_bar">
-                    <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Thông tin tài khoản</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Edit">Chỉnh sửa thông tin</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" asp-area="" asp-controller="MealMenu" asp-action="Index">Thực đơn tuần</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" asp-area="" asp-controller="MealMenu" asp-action="EditMeal">Chỉnh sửa thực đơn</a>
-                        </li>
-                    </ul>
-                </div>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="nav_bar">
+                        <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
+                            <li class="nav-item">
+                                <a class="nav-link" id="home_index" asp-area="" asp-controller="Home" asp-action="Index">Thông tin tài khoản</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Edit">Chỉnh sửa thông tin</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" asp-area="" asp-controller="MealMenu" asp-action="Index"> Thực đơn tuần</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" asp-area="" asp-controller="MealMenu" asp-action="EditMeal">Chỉnh sửa thực đơn</a>
+                            </li>
+                        </ul>
+                    </div>
+                }
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </nav>
@@ -48,12 +55,16 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 VietLinh
+            &copy; 2024 VietLinh Copyright
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        
+    </script>
 </body>
 </html>

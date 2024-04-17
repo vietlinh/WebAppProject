@@ -28,6 +28,8 @@ namespace WebAppProject.Controllers
             mealmenu.SideMeal = await _context.sideMeals.ToListAsync();
             mealmenu.MainMeal = await _context.mainMeals.ToListAsync();
             mealmenu.BasicMeal = await _context.basicMeals.ToListAsync();
+            mealmenu.user_id = user.Id;
+            mealmenu.user_name = user.FullName;
 
             if (register_user != null)
             {
@@ -66,6 +68,8 @@ namespace WebAppProject.Controllers
             mealmenu.SideMeal = await _context.sideMeals.ToListAsync();
             mealmenu.MainMeal = await _context.mainMeals.ToListAsync();
             mealmenu.BasicMeal = await _context.basicMeals.ToListAsync();
+            mealmenu.user_id = user.Id;
+            mealmenu.user_name = user.FullName;
             return View(mealmenu);
 
         }

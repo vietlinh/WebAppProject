@@ -18,6 +18,8 @@ namespace WebAppProject.ViewModels
         public bool DisableWednesday { get; set; }
         public bool DisableThursday { get; set; }
         public bool DisableFriday { get;set; }
+        public string user_id { get; set; }
+        public string user_name { get; set;}
         
     }
 }

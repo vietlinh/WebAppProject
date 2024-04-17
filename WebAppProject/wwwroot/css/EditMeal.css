@@ -8,8 +8,9 @@ div.nav_bar_list ul li a:hover {
 }
 div.nav_bar_list ul {
     list-style-type: none;
+    margin-left: 50px;
+    margin-top: 10px;
 }
-
 div.nav_bar_list ul li {
     display: inline-block;
 }
@@ -22,22 +23,21 @@ div.nav_bar {
 }
 div.table_1 {
     display: inline-block;
-    vertical-align: top;
-    margin-left: 150px;
+    margin-left: 100px;
     margin-top : 25px;
     border-right: 1px black solid;
 }
 div.table_2 {
     display: inline-block;
     vertical-align: top;
-    margin-left: 50px;
+    margin-left: 15px;
     margin-top: 25px;
     border-right: 1px black solid;
 }
 div.table_3 {
     display: inline-block;
     vertical-align: top;
-    margin-left: 50px;
+    margin-left: 25px;
     margin-top: 25px;
 }
 div.display_db {

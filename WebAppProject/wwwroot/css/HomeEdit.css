@@ -44,3 +44,6 @@ div.button_submit input {
     background-color: rgb(44, 169, 97, 0.84);
     border-color: rgb(44, 169, 97, 0.84);
 }
+div.button_submit input:hover {
+    background-color: darkgreen;
+}

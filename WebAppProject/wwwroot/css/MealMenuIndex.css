@@ -7,10 +7,17 @@ div.display_data {
 }
 div.register_meal {
     padding: 20px;
-    background-color: rgb(44, 169, 97, 0.84);
+    background-color: white;
     border-radius: 20px;
     border: 2px solid white;
 }
 div.register_meal h5 {
     margin-bottom: 15px;
+}
+#submit_button {
+    background-color: rgb(44, 169, 97, 0.84);
+    border-color: rgb(44, 169, 97, 0.84);
+}
+#submit_button:hover {
+    background-color: darkgreen;
 }

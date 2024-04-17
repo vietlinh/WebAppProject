@@ -118,6 +118,9 @@ div.profile_image img {
     vertical-align : bottom;
     border : 3px solid rgb(44, 169, 97, 0.84);
     padding: 70px;
-
+}
+#home_index {
+    background-color: green;
+    color: white;
 }
 
