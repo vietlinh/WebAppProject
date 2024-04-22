@@ -15,6 +15,14 @@
             <li>
                 <a class="nav-link" asp-controller="MealMenu" asp-action="CreateSideMeal">Thêm món phụ</a>
             </li>
+            <li>
+                <form asp-action="DeleteAll" method="post">
+                    <input type="submit" class="btn btn-danger" value="Xóa tất cả">
+                </form>
+            </li>
+            <li>
+                <p>@Model.tuesday_count</p>
+            </li>
         </ul>
     </div>
 </div>

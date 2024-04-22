@@ -15,10 +15,11 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  font-family: Helvetica, Arial, sans-serif !important;
 }
 body {
     margin-bottom: 60px;
-    background-image : url(../Image/background.jpg);
+    background-color: #F9F9F9;
 }
 nav.navbar {
     background-color: white !important;
@@ -32,5 +33,25 @@ footer {
 }
 #ul_nav_bar li a:hover {
     background-color: rgb(44, 169, 97, 0.84);
+    color: white;
+}
+#dropdown_1, #dropdown_2 {
+    background-color: white;
+    padding-top : 10px;
+    padding-bottom: 10px;
+    border: none;
+    margin : 0 !important;
+}
+#dropdown_1:hover,#dropdown_2:hover {
+    background-color: rgb(44, 169, 97, 0.84);
+    color: white;
+}
+#dropdown_a_1, #dropdown_a_2 , #dropdown_a_3 , #dropdown_a_4{
+    background-color: white;
+    color: black;
+}
+
+#dropdown_a_1:hover, #dropdown_a_2:hover, #dropdown_a_3:hover, #dropdown_a_4:hover{
+    background-color : rgb(44, 169, 97, 0.84);
     color: white;
 }

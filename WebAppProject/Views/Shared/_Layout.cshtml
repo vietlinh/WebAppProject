@@ -8,14 +8,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebAppProject</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>@ViewData["Title"] Cơm Văn Phòng</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebAppProject.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: rgb(44, 169, 97, 0.84);">COMVANPHONG</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -24,20 +25,27 @@
                 </button>
                 @if (SignInManager.IsSignedIn(User))
                 {
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown_1">
+                            <i class="fas fa-address-card"></i>&nbsp;Tài Khoản
+                        </button>
+                        <ul class="dropdown-menu" id="ul_1">
+                            <li><a class="dropdown-item" id="dropdown_a_1" asp-controller="Home" asp-action="Index">Thông tin</a></li>
+                            <li><a class="dropdown-item" id="dropdown_a_2" asp-controller="Home" asp-action="Edit">Sửa thông tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown_2">
+                            <i class="fas fa-pizza-slice"></i>&nbsp;Thực đơn
+                        </button>
+                        <ul class="dropdown-menu" id="ul_2">
+                            <li><a class="dropdown-item" id="dropdown_a_3" asp-controller="MealMenu" asp-action="Index">Xem thực đơn tuần</a></li>
+                            <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="MealMenu" asp-action="EditMeal">Sửa thực đơn</a></li>
+                        </ul>
+                    </div>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="nav_bar">
                         <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
-                            <li class="nav-item">
-                                <a class="nav-link" id="home_index" asp-area="" asp-controller="Home" asp-action="Index">Thông tin tài khoản</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Edit">Chỉnh sửa thông tin</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" asp-area="" asp-controller="MealMenu" asp-action="Index"> Thực đơn tuần</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" asp-area="" asp-controller="MealMenu" asp-action="EditMeal">Chỉnh sửa thực đơn</a>
-                            </li>
+
                         </ul>
                     </div>
                 }

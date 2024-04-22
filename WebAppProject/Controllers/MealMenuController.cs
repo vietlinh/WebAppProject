@@ -132,6 +132,11 @@ namespace WebAppProject.Controllers
             mealmenu1.SideMeal = await _context.sideMeals.ToListAsync();
             mealmenu1.MainMeal = await _context.mainMeals.ToListAsync();
             mealmenu1.BasicMeal = await _context.basicMeals.ToListAsync();
+            mealmenu1.monday_count = await _context.registerMealInfos.Where(p => p.Monday == true).CountAsync();
+            mealmenu1.tuesday_count = await _context.registerMealInfos.Where(p => p.Tuesday == true).CountAsync();
+            mealmenu1.wednesday_count = await _context.registerMealInfos.Where(p => p.Wednesday == true).CountAsync();
+            mealmenu1.thursday_count = await _context.registerMealInfos.Where(p => p.Thursday == true).CountAsync();
+            mealmenu1.friday_count = await _context.registerMealInfos.Where(p => p.Friday == true).CountAsync();
             return View(mealmenu1);
         }
         [Authorize(Roles = "Admin")]
@@ -178,6 +183,22 @@ namespace WebAppProject.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(EditMeal));
             }
+        }
+        [Authorize(Roles ="Admin")]
+        [HttpPost]
+        public async Task<IActionResult> DeleteAll()
+        {
+            var basicMealModel = await _context.basicMeals.ToListAsync();
+            var mainMealModel = await _context.mainMeals.ToListAsync();
+            var sideMealModel = await _context.sideMeals.ToListAsync();
+            _context.sideMeals.RemoveRange(sideMealModel);
+            _context.mainMeals.RemoveRange(mainMealModel);
+            _context.basicMeals.RemoveRange(basicMealModel);
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(EditMeal));
+
         }
     }
 }

@@ -4,15 +4,21 @@ div.display_data {
     margin-top: 50px;
     border: 3px solid white;
     border-radius: 20px;
+    font-family: Helvetica, Arial, sans-serif !important;
+    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
 }
 div.register_meal {
     padding: 20px;
     background-color: white;
     border-radius: 20px;
     border: 2px solid white;
+    font-family: Helvetica, Arial, sans-serif !important;
+    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
 }
 div.register_meal h5 {
     margin-bottom: 15px;
+    font-weight: 700;
+
 }
 #submit_button {
     background-color: rgb(44, 169, 97, 0.84);
@@ -20,4 +26,7 @@ div.register_meal h5 {
 }
 #submit_button:hover {
     background-color: darkgreen;
+}
+#table_day th {
+    color: rgb(44, 169, 97, 0.84);
 }

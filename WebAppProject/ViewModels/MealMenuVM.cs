@@ -20,6 +20,11 @@ namespace WebAppProject.ViewModels
         public bool DisableFriday { get;set; }
         public string user_id { get; set; }
         public string user_name { get; set;}
+        public int monday_count { get; set; }
+        public int tuesday_count { get;set; }
+        public int wednesday_count { get; set; }
+        public int thursday_count { get; set; }
+        public int friday_count { get; set;}
         
     }
 }
