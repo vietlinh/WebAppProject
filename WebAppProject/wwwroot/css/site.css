@@ -19,13 +19,13 @@ html {
 }
 body {
     margin-bottom: 60px;
-    background-color: #F9F9F9;
+    background-color: #EDE8F5;
 }
 nav.navbar {
-    background-color: white !important;
+    background-color: #3D52A0 !important;
 }
 footer {
-    background-color: white !important;
+    background-color: #7091E6 !important;
 }
 #ul_nav_bar li a {
     color: black;
@@ -36,22 +36,67 @@ footer {
     color: white;
 }
 #dropdown_1, #dropdown_2 {
-    background-color: white;
-    padding-top : 10px;
+    background-color: #3D52A0;
+    padding-top: 10px;
     padding-bottom: 10px;
     border: none;
-    margin : 0 !important;
+    margin: 0 !important;
+    color: #EDE8F5;
 }
 #dropdown_1:hover,#dropdown_2:hover {
-    background-color: rgb(44, 169, 97, 0.84);
-    color: white;
+    background-color: #EDE8F5;
+    color: #3D52A0;
 }
-#dropdown_a_1, #dropdown_a_2 , #dropdown_a_3 , #dropdown_a_4{
+#dropdown_a_1, #dropdown_a_2, #dropdown_a_3, #dropdown_a_4 {
     background-color: white;
-    color: black;
+    color: #3D52A0;
 }
 
 #dropdown_a_1:hover, #dropdown_a_2:hover, #dropdown_a_3:hover, #dropdown_a_4:hover{
-    background-color : rgb(44, 169, 97, 0.84);
-    color: white;
+    background-color : #3D52A0;
+    color: #EDE8F5;
+}
+#logo {
+    color: #EDE8F5;
+    font-weight: 900;
+}
+div.side_bar {
+    position : fixed;
+    height : 100%;
+    left: 0;
+    top: 0;
+    background-color: #ADBBDA;
+    transition : width 0.5s;
+    overflow : hidden;
+    width : 45px;
+    z-index : 1;
+}
+div.link_acc {
+    margin-left: 10px;
+    width : 250px;
+    overflow : hidden;
+    margin-top : 100px;
+}
+div.link_acc a, div.link_meal a{
+    text-decoration-line : none;
+    color : #3D52A0;
+    font-size: 16px;
+    display : block;
+    margin-top : 8px;
+    font-weight : 600;
+}
+div.link_acc a i , div.link_meal a i {
+    font-size: 25px;
+}
+div.side_bar:hover {
+    width : 200px;
+}
+div.link_meal {
+    margin-left: 10px;
+    width : 250px;
+    overflow : hidden;
+    margin-top : 30px;
+}
+div.link_acc a:hover , div.link_meal a:hover {
+    color: #EDE8F5;
 }

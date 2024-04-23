@@ -24,22 +24,22 @@
         background-color: forestgreen;
     }
     #manage {
-        border : 2px solid white;
+        border: 2px solid #EDE8F5;
         color: white;
-        background-color: rgb(44, 169, 97, 0.84);
         border-radius: 10px;
+        margin-right : 20px;
     }
     #manage:hover {
-        background-color: forestgreen;
+        background-color: #EDE8F5;
+        color : #3D52A0;
     }
     #logout {
-        border: 2px solid black;
+        border: 2px solid red;
         color: white;
-        background-color: red;
         border-radius : 10px;
     }
     #logout:hover {
-        background-color: darkred;
+        background-color: red;
     }
 </style>
 
@@ -51,7 +51,7 @@
     </li>
     <li class="nav-item">
         <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button id="logout" type="submit" class="nav-link btn btn-link border-0">Đăng xuất</button>
+            <button id="logout" type="submit" class="btn">Đăng xuất</button>
         </form>
     </li>
 }

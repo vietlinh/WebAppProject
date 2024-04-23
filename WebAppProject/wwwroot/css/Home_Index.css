@@ -1,112 +1,121 @@
 ﻿div.side_1 {
     display : inline-block;
+    margin-left: 50px;
 }
 div.side_2 {
     display : inline-block;
-    margin-left : 50px;
+    margin-left : 100px;
+    vertical-align : top;
 }
 div.info_table {
-    border: 3px solid white;
     padding: 50px;
-    background-color: white;
+    background-color: #8697C4;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif;
-    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
+    box-shadow: 1px 1px 1px 1px rgb(175, 175, 175, 0.25);
 }
 div.id p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.fullname p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
     font-size: 16px;
+    font-weight: 600;
 }
 div.country p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.email p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.phone p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.address p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.city p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.birthdate p {
-    border: 3px rgb(44, 169, 97, 0.84) solid;
+    border: 3px #EDE8F5 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-    color: black;
+    color: #3D52A0;
+    font-weight: 600;
 }
 div.id h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.fullname h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.country h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.city h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.phone h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.birthdate h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.address h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
 div.email h6 {
-    color: black;
+    color: #EDE8F5;
     font-size: 18px;
     font-weight: 700;
 }
@@ -115,13 +124,21 @@ div.profile_image {
     
 }
 div.profile_image img {
-    margin-left: 300px;
+    margin-left: 200px;
     vertical-align : bottom;
-    border : 3px solid rgb(44, 169, 97, 0.84);
+    border : 3px solid #3D52A0;
     padding: 70px;
 }
-#home_index {
-    background-color: green;
-    color: white;
+div.button a {
+    text-decoration-line: none;
+    color: #3D52A0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #EDE8F5;
+}
+div.button a:hover {
+    background-color: #3D52A0;
+    color: #EDE8F5;
 }
 

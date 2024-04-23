@@ -7,24 +7,25 @@
     <div class="nav_bar_list">
         <ul>
             <li>
-                <a class="nav-link" asp-controller="MealMenu" asp-action="CreateBasicMeal">Thêm món cơ bản</a>
+                <a class="nav_link" asp-controller="MealMenu" asp-action="CreateBasicMeal">Thêm món cơ bản</a>
             </li>
             <li>
-                <a class="nav-link" asp-controller="MealMenu" asp-action="CreateMainMeal">Thêm món chính</a>
+                <a class="nav_link" asp-controller="MealMenu" asp-action="CreateMainMeal">Thêm món chính</a>
             </li>
             <li>
-                <a class="nav-link" asp-controller="MealMenu" asp-action="CreateSideMeal">Thêm món phụ</a>
+                <a class="nav_link" asp-controller="MealMenu" asp-action="CreateSideMeal">Thêm món phụ</a>
             </li>
             <li>
                 <form asp-action="DeleteAll" method="post">
-                    <input type="submit" class="btn btn-danger" value="Xóa tất cả">
+                    <input id="button_deleteall" type="submit" class="btn btn-danger" value="Xóa tất cả">
                 </form>
-            </li>
-            <li>
-                <p>@Model.tuesday_count</p>
             </li>
         </ul>
     </div>
+</div>  
+<div class="display_number_info">
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
 </div>
 
 <div class="display_db">
@@ -118,3 +119,38 @@
         </div>
     </div>
 </div>
+
+<script>
+    const xValues = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6"];
+    const yValues = [@Model.monday_count,@Model.tuesday_count,@Model.wednesday_count,@Model.thursday_count,@Model.friday_count];
+    const barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+
+    new Chart("myChart", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Số lượng đăng ký cơm trưa",
+                fontColor : "red"
+            },
+            legend: {
+                labels: {
+                    fontColor : 'red'
+                }
+            }
+        }
+    });
+</script>

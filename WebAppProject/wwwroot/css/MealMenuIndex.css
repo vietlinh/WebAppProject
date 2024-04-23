@@ -1,32 +1,41 @@
 ﻿
 div.display_data {
-    background-color: white;
+    background-color: #8697C4;
     margin-top: 50px;
-    border: 3px solid white;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif !important;
     box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
 }
 div.register_meal {
     padding: 20px;
-    background-color: white;
+    background-color: #3D52A0;
     border-radius: 20px;
-    border: 2px solid white;
     font-family: Helvetica, Arial, sans-serif !important;
     box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
 }
 div.register_meal h5 {
     margin-bottom: 15px;
     font-weight: 700;
-
+    color : #EDE8F5;
+    font-weight : 700;
+}
+div.register_meal p {
+    color : #EDE8F5;
+    font-weight : 600;
 }
 #submit_button {
-    background-color: rgb(44, 169, 97, 0.84);
-    border-color: rgb(44, 169, 97, 0.84);
+    background-color: #EDE8F5;
+    border-color: #EDE8F5;
+    color: #3D52A0;
 }
 #submit_button:hover {
-    background-color: darkgreen;
+    background-color: #3D52A0;
+    color : #EDE8F5;
 }
 #table_day th {
-    color: rgb(44, 169, 97, 0.84);
+    color: #EDE8F5;
+}
+tr.table_meal td {
+    color: white;
+    font-weight : 600;
 }

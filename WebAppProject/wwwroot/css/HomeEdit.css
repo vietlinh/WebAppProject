@@ -1,9 +1,7 @@
 ﻿div.info_table {
     padding: 40px;
-    border: 3px solid white;
-    background-color: white;
+    background-color: #8697C4;
     border-radius: 20px;
-    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
     font-family: Helvetica, Arial, sans-serif;
 }
 div.side_1 {
@@ -13,39 +11,41 @@ div.side_2 {
     width: 35%;
 }
 div.fullname label {
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 500;
 }
 div.phone label {
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 500;
 }
 div.address label {
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 500;
 }
 div.country label {
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 500;
 }
 div.city label {
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 500;
 }
 div.birthdate label {
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 500;
 }
 div.button_submit input {
-    background-color: rgb(44, 169, 97, 0.84);
-    border-color: rgb(44, 169, 97, 0.84);
+    background-color: #EDE8F5;
+    border-color: #EDE8F5;
+    color: #3D52A0;
 }
 div.button_submit input:hover {
-    background-color: darkgreen;
+    background-color: #3D52A0;
+    color : #EDE8F5;
 }

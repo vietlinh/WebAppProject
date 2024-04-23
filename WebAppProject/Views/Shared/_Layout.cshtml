@@ -9,6 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>@ViewData["Title"] Cơm Văn Phòng</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -18,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-sm box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: rgb(44, 169, 97, 0.84);">COMVANPHONG</a>
+                <a id="logo" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMVANPHONG</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -47,6 +48,19 @@
                         <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
 
                         </ul>
+                    </div>
+                    <div class="side_bar">
+                        <div class="link_acc">
+                            <a asp-controller="Home" asp-action="Index"><i class="far fa-address-card"></i>&nbsp; Tài khoản</a>
+                            <a asp-controller="Home" asp-action="Edit"><i class="far fa-edit"></i>&nbsp; Sửa thông tin</a>
+                        </div>
+                        <div class="link_meal">
+                            <a asp-controller="MealMenu" asp-action="Index"><i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp; Thực đơn</a>
+                            <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
+                            <a asp-controller="MealMenu" asp-action="CreateBasicMeal"><i class="fas fa-bacon"></i>&nbsp; Thêm món cơ bản</a>
+                            <a asp-controller="MealMenu" asp-action="CreateSideMeal"><i class="fas fa-egg"></i>&nbsp;&nbsp;&nbsp; Thêm món phụ</a>
+                            <a asp-controller="MealMenu" asp-action="CreateMainMeal"><i class="	fas fa-pizza-slice"></i>&nbsp;&nbsp; Thêm món chính</a>
+                        </div>
                     </div>
                 }
                 @await Html.PartialAsync("_LoginPartial")

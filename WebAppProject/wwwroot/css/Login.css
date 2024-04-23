@@ -1,17 +1,17 @@
 ﻿div.login_form {
-    width : 35%;
+    width: 35%;
     margin-left: 420px;
-    margin-top : 100px;
-    border : 1px solid white;
-    padding : 50px;
-    background-color: white;
-    border-radius : 15px;
+    margin-top: 100px;
+    border: 1px solid white;
+    padding: 50px;
+    background-color: #8697C4;
+    border-radius: 15px;
 }
 div.login_form h5 {
     margin-left: 120px;
     margin-bottom : 15px;
     font-weight: 700;
-    color: rgb(44, 169, 97, 0.84);
+    color: #3D52A0;
 }
 div.login_form_bottom {
     margin-top : 10px;
@@ -28,9 +28,19 @@ div.login_form_bottom p {
     margin-right: 50px;
 }
 #email_input {
-    border-color: green !important;
+    border-color: #3D52A0 !important;
 }
 #password_input {
-    border-color: green !important;
+    border-color: #3D52A0 !important;
+}
+#login_submit {
+    background-color: #3D52A0;
+    border-color: #3D52A0;
+    color: #EDE8F5;
+}
+#login_submit:hover {
+    background-color: #EDE8F5;
+    border-color :#EDE8F5;
+    color : #3D52A0;
 }
 
