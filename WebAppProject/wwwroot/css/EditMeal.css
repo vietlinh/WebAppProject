@@ -13,7 +13,7 @@ div.nav_bar_list ul li a:hover {
 }
 div.nav_bar_list ul {
     list-style-type: none;
-    margin-top: 9px;
+    margin-top : 4rem;
 }
 div.nav_bar_list ul li {
     display: inline-block;
@@ -22,10 +22,12 @@ div.nav_bar_list ul li {
 div.display_number_info {
     background-color: #3D52A0;
     display: inline-block;
-    width: 25%;
+    width: 35%;
     height: 250px;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 50px;
+    vertical-align : top;
+
 }
 #button_deleteall {
     background-color: #3D52A0;
@@ -34,6 +36,9 @@ div.display_number_info {
     border-radius: 10px;
     font-size : 18px;
     font-weight : 600;
+    transition : background-color 0.3s;
+    padding-top : 3px;
+    padding-bottom : 3px;
 }
 #button_deleteall:hover {
     background-color: red;
@@ -43,29 +48,29 @@ div.display_number_info {
 div.nav_bar {
     background-color: #3D52A0;
     border-radius: 10px;
-    width: 70%;
+    width: 50%;
     display: inline-block;
-    height: 60px;
-    vertical-align:top;
-    margin-top : 75px;
+    height: 150px;
+    margin-top : 60px;
+    margin-left: 70px;
 }
 div.table_1 {
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 25%;
     margin-top : 25px;
     border-right: 1px black solid;
 }
 div.table_2 {
     display: inline-block;
     vertical-align: top;
-    margin-left: 15px;
+    margin-left: 25%;
     margin-top: 25px;
     border-right: 1px black solid;
 }
 div.table_3 {
     display: inline-block;
     vertical-align: top;
-    margin-left: 25px;
+    margin-left: 25%;
     margin-top: 25px;
 }
 div.display_db {
@@ -73,6 +78,7 @@ div.display_db {
     border: 1px white solid;
     margin-top: 25px;
     border-radius: 20px;
-    box-shadow: 1px 1px rgb(175, 175, 175, 0.25)
+    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
+    display : block;
 }
 

@@ -227,7 +227,7 @@
 
 <script>
     var date = new Date();
-    const currentdayofweek = date.getDay();
+    var currentdayofweek = date.getDay();
     if (currentdayofweek >= 1) {
         document.getElementById("monday").disabled = true;
     }
@@ -258,5 +258,11 @@
     else {
         document.getElementById("friday").disabled = false;
     }
-
+    if (currentdayofweek == 6) {
+        document.getElementById("monday").disabled = false;
+        document.getElementById("tuesday").disabled = false;
+        document.getElementById("wednesday").disabled = false;
+        document.getElementById("thursday").disabled = false;
+        document.getElementById("friday").disabled = false;
+    }
 </script>

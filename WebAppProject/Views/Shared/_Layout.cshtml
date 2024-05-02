@@ -56,6 +56,7 @@
                         </div>
                         <div class="link_meal">
                             <a asp-controller="MealMenu" asp-action="Index"><i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp; Thực đơn</a>
+                            <br />
                             <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
                             <a asp-controller="MealMenu" asp-action="CreateBasicMeal"><i class="fas fa-bacon"></i>&nbsp; Thêm món cơ bản</a>
                             <a asp-controller="MealMenu" asp-action="CreateSideMeal"><i class="fas fa-egg"></i>&nbsp;&nbsp;&nbsp; Thêm món phụ</a>
@@ -77,7 +78,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 VietLinh Copyright
+            <span id="footer_copyright">&copy; 2024 VietLinh Copyright</span>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

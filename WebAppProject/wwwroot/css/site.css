@@ -25,7 +25,7 @@ nav.navbar {
     background-color: #3D52A0 !important;
 }
 footer {
-    background-color: #7091E6 !important;
+    background-color: #3D52A0 !important;
 }
 #ul_nav_bar li a {
     color: black;
@@ -74,7 +74,6 @@ div.side_bar {
 div.link_acc {
     margin-left: 10px;
     width : 250px;
-    overflow : hidden;
     margin-top : 100px;
 }
 div.link_acc a, div.link_meal a{
@@ -98,5 +97,8 @@ div.link_meal {
     margin-top : 30px;
 }
 div.link_acc a:hover , div.link_meal a:hover {
+    color: #EDE8F5;
+}
+#footer_copyright {
     color: #EDE8F5;
 }

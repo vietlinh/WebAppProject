@@ -21,6 +21,7 @@ div.id p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.fullname p {
     border: 3px #EDE8F5 solid;
@@ -30,6 +31,7 @@ div.fullname p {
     color: #3D52A0;
     font-size: 16px;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.country p {
     border: 3px #EDE8F5 solid;
@@ -38,6 +40,7 @@ div.country p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.email p {
     border: 3px #EDE8F5 solid;
@@ -46,6 +49,7 @@ div.email p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.phone p {
     border: 3px #EDE8F5 solid;
@@ -54,6 +58,7 @@ div.phone p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.address p {
     border: 3px #EDE8F5 solid;
@@ -62,6 +67,7 @@ div.address p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.city p {
     border: 3px #EDE8F5 solid;
@@ -70,6 +76,7 @@ div.city p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.birthdate p {
     border: 3px #EDE8F5 solid;
@@ -78,6 +85,7 @@ div.birthdate p {
     text-align: center;
     color: #3D52A0;
     font-weight: 600;
+    background-color: #EDE8F5;
 }
 div.id h6 {
     color: #EDE8F5;
@@ -128,6 +136,7 @@ div.profile_image img {
     vertical-align : bottom;
     border : 3px solid #3D52A0;
     padding: 70px;
+    
 }
 div.button a {
     text-decoration-line: none;
