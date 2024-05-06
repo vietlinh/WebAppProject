@@ -6,10 +6,12 @@
     border-radius: 10px;
     text-decoration-line: none;
     padding : 5px;
+    background-color : green;
+    transition : background-color 0.2s;
 }
 div.nav_bar_list ul li a:hover {
-    color:  #3D52A0 !important;
-    background-color: #EDE8F5 !important;
+    color:  #EDE8F5 !important;
+    background-color: darkgreen !important;
 }
 div.nav_bar_list ul {
     list-style-type: none;
@@ -30,7 +32,7 @@ div.display_number_info {
 
 }
 #button_deleteall {
-    background-color: #3D52A0;
+    background-color: red;
     color: #EDE8F5;
     border : 2px red solid;
     border-radius: 10px;
@@ -41,12 +43,12 @@ div.display_number_info {
     padding-bottom : 3px;
 }
 #button_deleteall:hover {
-    background-color: red;
+    background-color: darkred;
+    border-color : darkred;
     color: #EDE8F5;
 }
 
 div.nav_bar {
-    background-color: #3D52A0;
     border-radius: 10px;
     width: 50%;
     display: inline-block;
@@ -80,5 +82,24 @@ div.display_db {
     border-radius: 20px;
     box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
     display : block;
+}
+#button_delete_register_all {
+    position: absolute;
+    top: 270px;
+    left: 220px;
+    background-color: red;
+    border-color: red;
+    border : 1px solid;
+    color : white;
+    box-shadow : none;
+    font-weight : 500;
+    padding : 7px;
+    transition : background-color 0.2s;
+    border-radius : 10px;
+}
+#button_delete_register_all:hover {
+    background-color : darkred;
+    border-color : darkred;
+    color : white;
 }
 

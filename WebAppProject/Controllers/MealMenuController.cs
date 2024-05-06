@@ -200,5 +200,15 @@ namespace WebAppProject.Controllers
             return RedirectToAction(nameof(EditMeal));
 
         }
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public async Task<IActionResult> delete_register_all()
+        {
+            var registerMealModel = await _context.registerMealInfos.ToListAsync();
+            _context.registerMealInfos.RemoveRange(registerMealModel);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(EditMeal));
+        }
     }
 }

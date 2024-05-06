@@ -102,3 +102,43 @@ div.link_acc a:hover , div.link_meal a:hover {
 #footer_copyright {
     color: #EDE8F5;
 }
+div.logo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    display : none;
+}
+div.logo h5 {
+    color: #3D52A0;
+    font-weight : 800;
+    font-size : 20px;
+}
+div.side_bar:hover div.logo {
+    display : block;
+}
+div.search_bar input {
+    border-radius: 10px;
+    border: 2px solid #EDE8F5;
+    margin-left: 5px;
+    color: #3D52A0;
+    height: 35px;
+    width: 250px;
+}
+div.search_bar input:focus {
+    outline : none;
+    border-color : red;
+}
+div.search_bar button {
+    margin-left: 5px;
+    border: 2px solid #EDE8F5;
+    background-color: #3D52A0;
+    border-radius: 10px;
+    color: #EDE8F5;
+    padding : 5px;
+    transition : background-color 0.2s;
+}
+div.search_bar button:hover {
+    background-color : #EDE8F5;
+    color : #3D52A0;
+
+}

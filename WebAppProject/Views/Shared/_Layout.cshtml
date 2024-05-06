@@ -44,12 +44,19 @@
                             <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="MealMenu" asp-action="EditMeal">Sửa thực đơn</a></li>
                         </ul>
                     </div>
+                    <div class="search_bar">
+                        <input type="text" placeholder=" &nbsp;Tìm kiếm..."/>
+                        <button>Search</button>
+                    </div>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="nav_bar">
                         <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
 
                         </ul>
                     </div>
                     <div class="side_bar">
+                        <div class="logo" id="logo">
+                            <h5>COMVANPHONG</h5>
+                        </div>
                         <div class="link_acc">
                             <a asp-controller="Home" asp-action="Index"><i class="far fa-address-card"></i>&nbsp; Tài khoản</a>
                             <a asp-controller="Home" asp-action="Edit"><i class="far fa-edit"></i>&nbsp; Sửa thông tin</a>
@@ -87,7 +94,7 @@
     @await RenderSectionAsync("Scripts", required: false)
 
     <script>
-        
+ 
     </script>
 </body>
 </html>
