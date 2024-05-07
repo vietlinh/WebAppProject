@@ -17,7 +17,12 @@
             </li>
             <li>
                 <form asp-action="DeleteAll" method="post">
-                    <input id="button_deleteall" type="submit" class="button_delete" value="Xóa tất cả">
+                    <input id="button_deleteall" type="submit" class="button_delete" value="Xóa tất cả" onclick="return confirmAction()">
+                </form>
+            </li>
+            <li>
+                <form asp-action="delete_register_all" method="post">
+                    <input id="button_delete_register_all" type="submit" value="Xóa danh sách đăng ký" onclick="return confirmAction()"/>
                 </form>
             </li>
         </ul>
@@ -25,10 +30,6 @@
 </div>  
 <div class="display_number_info">
     <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-    <form asp-action="delete_register_all" method="post">
-        <input id="button_delete_register_all" type="submit" value="Xóa danh sách đăng ký"/>
-    </form>
-
 </div>
 
 <div class="display_db">
@@ -156,4 +157,8 @@
             }
         }
     });
+
+    function confirmAction() {
+        return confirm("Bạn chắc chắn muốn xóa không ?");
+    }
 </script>

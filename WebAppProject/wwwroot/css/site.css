@@ -47,6 +47,10 @@ footer {
     background-color: #EDE8F5;
     color: #3D52A0;
 }
+#dropdown_1:focus ,#dropdown_2:focus {
+    background-color: #EDE8F5;
+    color : #3D52A0;
+}
 #dropdown_a_1, #dropdown_a_2, #dropdown_a_3, #dropdown_a_4 {
     background-color: white;
     color: #3D52A0;
@@ -138,7 +142,7 @@ div.search_bar button {
     transition : background-color 0.2s;
 }
 div.search_bar button:hover {
-    background-color : #EDE8F5;
-    color : #3D52A0;
-
+    background-color : red;
+    color : #EDE8F5;
+    border-color : red;
 }

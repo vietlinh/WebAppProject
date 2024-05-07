@@ -4,7 +4,7 @@ div.display_data {
     margin-top: 50px;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif !important;
-    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
+
 }
 div.register_meal {
     padding: 20px;
@@ -33,9 +33,12 @@ div.register_meal p {
     color : #3D52A0;
 }
 #table_day th {
-    color: #3D52A0;
+    color: yellow;
 }
 tr.table_meal td {
     color: white;
     font-weight : 600;
+}
+#meal_table {
+    min-height : 300px;
 }

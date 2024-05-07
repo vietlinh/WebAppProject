@@ -8,6 +8,7 @@
     padding : 5px;
     background-color : green;
     transition : background-color 0.2s;
+    border-color : green;
 }
 div.nav_bar_list ul li a:hover {
     color:  #EDE8F5 !important;
@@ -15,7 +16,7 @@ div.nav_bar_list ul li a:hover {
 }
 div.nav_bar_list ul {
     list-style-type: none;
-    margin-top : 4rem;
+    margin-top : 2rem;
 }
 div.nav_bar_list ul li {
     display: inline-block;
@@ -53,8 +54,9 @@ div.nav_bar {
     width: 50%;
     display: inline-block;
     height: 150px;
-    margin-top : 60px;
+    margin-top: 60px;
     margin-left: 70px;
+    background-color: #3D52A0;
 }
 div.table_1 {
     display: inline-block;
@@ -84,18 +86,15 @@ div.display_db {
     display : block;
 }
 #button_delete_register_all {
-    position: absolute;
-    top: 270px;
-    left: 220px;
     background-color: red;
-    border-color: red;
-    border : 1px solid;
+    border : 1px solid red;
     color : white;
     box-shadow : none;
     font-weight : 500;
     padding : 7px;
     transition : background-color 0.2s;
     border-radius : 10px;
+    margin-top : 10px;
 }
 #button_delete_register_all:hover {
     background-color : darkred;

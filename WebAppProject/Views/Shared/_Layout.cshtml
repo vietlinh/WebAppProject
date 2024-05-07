@@ -2,6 +2,7 @@
 @using WebAppProject.Areas.Identity.Data
 
 @inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> userManager
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,7 @@
                     </div>
                     <div class="search_bar">
                         <input type="text" placeholder=" &nbsp;Tìm kiếm..."/>
-                        <button>Search</button>
+                        <button>Tìm kiếm</button>
                     </div>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="nav_bar">
                         <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
@@ -64,10 +65,17 @@
                         <div class="link_meal">
                             <a asp-controller="MealMenu" asp-action="Index"><i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp; Thực đơn</a>
                             <br />
-                            <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
-                            <a asp-controller="MealMenu" asp-action="CreateBasicMeal"><i class="fas fa-bacon"></i>&nbsp; Thêm món cơ bản</a>
-                            <a asp-controller="MealMenu" asp-action="CreateSideMeal"><i class="fas fa-egg"></i>&nbsp;&nbsp;&nbsp; Thêm món phụ</a>
-                            <a asp-controller="MealMenu" asp-action="CreateMainMeal"><i class="	fas fa-pizza-slice"></i>&nbsp;&nbsp; Thêm món chính</a>
+                            @{
+                                var user = await userManager.GetUserAsync(User);
+                                bool is_admin = await userManager.IsInRoleAsync(user, "Admin");
+                            }
+                            @if (is_admin == true)
+                            {
+                                <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
+                                <a asp-controller="MealMenu" asp-action="CreateBasicMeal"><i class="fas fa-bacon"></i>&nbsp; Thêm món cơ bản</a>
+                                <a asp-controller="MealMenu" asp-action="CreateSideMeal"><i class="fas fa-egg"></i>&nbsp;&nbsp;&nbsp; Thêm món phụ</a>
+                                <a asp-controller="MealMenu" asp-action="CreateMainMeal"><i class="	fas fa-pizza-slice"></i>&nbsp;&nbsp; Thêm món chính</a>
+                            }
                         </div>
                     </div>
                 }
@@ -94,7 +102,7 @@
     @await RenderSectionAsync("Scripts", required: false)
 
     <script>
- 
+        
     </script>
 </body>
 </html>

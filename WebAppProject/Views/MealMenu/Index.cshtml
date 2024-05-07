@@ -30,13 +30,13 @@
         <label class="form-check-label" for="inlineCheckbox1">Thứ 6</label>
     </div>
     <div class="form-check-inline">
-        <input type="submit" value="Lưu" class="btn btn-primary" id="submit_button" />
+        <input type="submit" value="Lưu" class="btn btn-primary" id="submit_button" onclick="inform_display()" />
     </div>
     </form>
 </div>
 
 <div class="display_data">
-    <table class="table table-striped">
+    <table class="table table-striped" id="meal_table">
         <thead>
             <tr id="table_day">
                 <th></th>
@@ -164,7 +164,7 @@
                 </td>
             </tr>
             <tr class="table_meal">
-                <td style="font-weight:700; color:yellow;">Món cơ bản</td>
+                <td style="font-weight:700; color:orange;">Món cơ bản</td>
                 <td>
                     @foreach (var meal in Model.BasicMeal)
                     {
@@ -265,4 +265,9 @@
         document.getElementById("thursday").disabled = false;
         document.getElementById("friday").disabled = false;
     }
+
+    function inform_display() {
+        alert("Đăng ký cơm thành công !");
+    }
+
 </script>

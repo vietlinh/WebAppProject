@@ -13,6 +13,7 @@ div.info_table {
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif;
     box-shadow: 1px 1px 1px 1px rgb(175, 175, 175, 0.25);
+    min-height : 550px;
 }
 div.id p {
     border: 3px #EDE8F5 solid;
