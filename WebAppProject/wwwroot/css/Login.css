@@ -2,9 +2,9 @@
     width: 35%;
     margin-left: 420px;
     margin-top: 100px;
-    border: 1px solid white;
+    border: none;
     padding: 50px;
-    background-color: #8697C4;
+    background-color: #EDE8F5;
     border-radius: 15px;
 }
 div.login_form h5 {
@@ -34,13 +34,14 @@ div.login_form_bottom p {
     border-color: #3D52A0 !important;
 }
 #login_submit {
-    background-color: #3D52A0;
+    background-color: #EDE8F5;
     border-color: #3D52A0;
-    color: #EDE8F5;
+    color: #3D52A0;
+    border : 2px solid;
 }
 #login_submit:hover {
-    background-color: #EDE8F5;
-    border-color :#EDE8F5;
-    color : #3D52A0;
+    background-color: #3D52A0;
+    border-color :#3D52A0;
+    color : #EDE8F5;
 }
 

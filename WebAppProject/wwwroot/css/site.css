@@ -19,7 +19,7 @@ html {
 }
 body {
     margin-bottom: 60px;
-    background-color: #EDE8F5;
+    background-image: url(/Image/background_purple.jpg);
 }
 nav.navbar {
     background-color: #3D52A0 !important;
@@ -65,15 +65,15 @@ footer {
     font-weight: 900;
 }
 div.side_bar {
-    position : fixed;
-    height : 100%;
+    position: fixed;
+    height: 100%;
     left: 0;
     top: 0;
-    background-color: #ADBBDA;
-    transition : width 0.5s;
-    overflow : hidden;
-    width : 45px;
-    z-index : 1;
+    background-color: #EDE8F5;
+    transition: width 0.5s;
+    overflow: hidden;
+    width: 45px;
+    z-index: 1;
 }
 div.link_acc {
     margin-left: 10px;
@@ -101,7 +101,7 @@ div.link_meal {
     margin-top : 30px;
 }
 div.link_acc a:hover , div.link_meal a:hover {
-    color: #EDE8F5;
+    color: red;
 }
 #footer_copyright {
     color: #EDE8F5;

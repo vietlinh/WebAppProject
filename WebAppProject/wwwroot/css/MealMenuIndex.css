@@ -1,14 +1,13 @@
 ﻿
 div.display_data {
-    background-color: #8697C4;
+    background-color: #EDE8F5;
     margin-top: 50px;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif !important;
-
 }
 div.register_meal {
     padding: 20px;
-    background-color: #3D52A0;
+    background-color: #EDE8F5;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif !important;
     box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
@@ -16,28 +15,29 @@ div.register_meal {
 div.register_meal h5 {
     margin-bottom: 15px;
     font-weight: 700;
-    color : #EDE8F5;
+    color : #3D52A0;
     font-weight : 700;
 }
 div.register_meal p {
-    color : #EDE8F5;
+    color : #3D52A0;
     font-weight : 600;
 }
 #submit_button {
     background-color: #EDE8F5;
-    border-color: #EDE8F5;
+    border-color: #3D52A0;
+    border : 2px solid;
     color: #3D52A0;
 }
 #submit_button:hover {
-    background-color: #ADBBDA;
-    color : #3D52A0;
+    background-color: #3D52A0;
+    color : #EDE8F5;
 }
 #table_day th {
-    color: yellow;
+    color: red;
 }
 tr.table_meal td {
-    color: white;
-    font-weight : 600;
+    color: #3D52A0;
+    font-weight: 600;
 }
 #meal_table {
     min-height : 300px;

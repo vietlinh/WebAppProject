@@ -7,17 +7,8 @@
     <div class="nav_bar_list">
         <ul>
             <li>
-                <a class="nav_link" asp-controller="MealMenu" asp-action="CreateBasicMeal">Thêm món cơ bản</a>
-            </li>
-            <li>
-                <a class="nav_link" asp-controller="MealMenu" asp-action="CreateMainMeal">Thêm món chính</a>
-            </li>
-            <li>
-                <a class="nav_link" asp-controller="MealMenu" asp-action="CreateSideMeal">Thêm món phụ</a>
-            </li>
-            <li>
                 <form asp-action="DeleteAll" method="post">
-                    <input id="button_deleteall" type="submit" class="button_delete" value="Xóa tất cả" onclick="return confirmAction()">
+                    <input id="button_deleteall" type="submit" class="button_delete" value="Xóa tất cả danh sách món" onclick="return confirmAction()">
                 </form>
             </li>
             <li>

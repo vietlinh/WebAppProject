@@ -9,14 +9,14 @@ div.side_2 {
 }
 div.info_table {
     padding: 50px;
-    background-color: #8697C4;
+    background-color: #EDE8F5;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif;
     box-shadow: 1px 1px 1px 1px rgb(175, 175, 175, 0.25);
-    min-height : 550px;
+    min-height: 550px;
 }
 div.id p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -25,7 +25,7 @@ div.id p {
     background-color: #EDE8F5;
 }
 div.fullname p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -35,7 +35,7 @@ div.fullname p {
     background-color: #EDE8F5;
 }
 div.country p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -44,7 +44,7 @@ div.country p {
     background-color: #EDE8F5;
 }
 div.email p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -53,7 +53,7 @@ div.email p {
     background-color: #EDE8F5;
 }
 div.phone p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -62,7 +62,7 @@ div.phone p {
     background-color: #EDE8F5;
 }
 div.address p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -71,7 +71,7 @@ div.address p {
     background-color: #EDE8F5;
 }
 div.city p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -80,7 +80,7 @@ div.city p {
     background-color: #EDE8F5;
 }
 div.birthdate p {
-    border: 3px #EDE8F5 solid;
+    border: 3px #3D52A0 solid;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -89,42 +89,42 @@ div.birthdate p {
     background-color: #EDE8F5;
 }
 div.id h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.fullname h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.country h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.city h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.phone h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.birthdate h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.address h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }
 div.email h6 {
-    color: #EDE8F5;
+    color: #3D52A0;
     font-size: 18px;
     font-weight: 700;
 }

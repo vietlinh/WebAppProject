@@ -1,14 +1,14 @@
 ﻿div.nav_bar_list ul li a {
-    color: white;
+    color: #EDE8F5;
     font-weight: 600;
     font-size: 18px;
     border: 2px solid #EDE8F5;
     border-radius: 10px;
     text-decoration-line: none;
-    padding : 5px;
-    background-color : green;
-    transition : background-color 0.2s;
-    border-color : green;
+    padding: 5px;
+    background-color: green;
+    transition: background-color 0.2s;
+    border-color: green;
 }
 div.nav_bar_list ul li a:hover {
     color:  #EDE8F5 !important;
@@ -16,29 +16,28 @@ div.nav_bar_list ul li a:hover {
 }
 div.nav_bar_list ul {
     list-style-type: none;
-    margin-top : 2rem;
+    margin-top : 1rem;
 }
 div.nav_bar_list ul li {
     display: inline-block;
     margin-left: 10px;
 }
 div.display_number_info {
-    background-color: #3D52A0;
+    background-color: #EDE8F5;
     display: inline-block;
     width: 35%;
     height: 250px;
     border-radius: 10px;
     margin-left: 50px;
-    vertical-align : top;
-
+    vertical-align: top;
 }
 #button_deleteall {
     background-color: red;
     color: #EDE8F5;
     border : 2px red solid;
     border-radius: 10px;
-    font-size : 18px;
-    font-weight : 600;
+    font-size : 16px;
+    font-weight : 500;
     transition : background-color 0.3s;
     padding-top : 3px;
     padding-bottom : 3px;
@@ -53,10 +52,10 @@ div.nav_bar {
     border-radius: 10px;
     width: 50%;
     display: inline-block;
-    height: 150px;
-    margin-top: 60px;
+    height: 100px;
+    margin-top: 10px;
     margin-left: 70px;
-    background-color: #3D52A0;
+    background-color: #EDE8F5;
 }
 div.table_1 {
     display: inline-block;
@@ -78,23 +77,24 @@ div.table_3 {
     margin-top: 25px;
 }
 div.display_db {
-    background-color: #8697C4;
+    background-color: #EDE8F5;
     border: 1px white solid;
     margin-top: 25px;
     border-radius: 20px;
     box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
-    display : block;
+    display: block;
 }
 #button_delete_register_all {
     background-color: red;
-    border : 1px solid red;
-    color : white;
-    box-shadow : none;
-    font-weight : 500;
-    padding : 7px;
-    transition : background-color 0.2s;
-    border-radius : 10px;
-    margin-top : 10px;
+    border: 1px solid red;
+    color: #EDE8F5;
+    box-shadow: none;
+    font-weight: 500;
+    padding: 3px;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
 }
 #button_delete_register_all:hover {
     background-color : darkred;

@@ -1,6 +1,6 @@
 ﻿div.info_table {
     padding: 40px;
-    background-color: #8697C4;
+    background-color: #EDE8F5;
     border-radius: 20px;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -42,7 +42,8 @@ div.birthdate label {
 }
 div.button_submit input {
     background-color: #EDE8F5;
-    border-color: #EDE8F5;
+    border-color: #3D52A0;
+    border : 2px solid;
     color: #3D52A0;
 }
 div.button_submit input:hover {
