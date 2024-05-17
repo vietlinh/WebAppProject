@@ -42,7 +42,13 @@
                         </button>
                         <ul class="dropdown-menu" id="ul_2">
                             <li><a class="dropdown-item" id="dropdown_a_3" asp-controller="MealMenu" asp-action="Index">Xem thực đơn tuần</a></li>
+                            @{
+                                var user = await userManager.GetUserAsync(User);
+                                bool is_admin = await userManager.IsInRoleAsync(user, "Admin");
+                            }
+                            @if (is_admin == true) {
                             <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="MealMenu" asp-action="EditMeal">Sửa thực đơn</a></li>
+                            }
                         </ul>
                     </div>
                     <div class="search_bar">
@@ -65,10 +71,6 @@
                         <div class="link_meal">
                             <a asp-controller="MealMenu" asp-action="Index"><i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp; Thực đơn</a>
                             <br />
-                            @{
-                                var user = await userManager.GetUserAsync(User);
-                                bool is_admin = await userManager.IsInRoleAsync(user, "Admin");
-                            }
                             @if (is_admin == true)
                             {
                                 <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>

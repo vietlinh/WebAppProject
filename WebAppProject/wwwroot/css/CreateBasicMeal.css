@@ -1,0 +1,21 @@
+﻿h5 {
+    color : red;
+    font-size : 20px;
+    font-weight : 700;
+    margin-bottom : 20px;
+}
+div.create_form {
+    background-color: #EDE8F5;
+    padding : 30px;
+    border-radius : 10px;
+
+}
+div.button_submit input {
+    background-color: #EDE8F5;
+    color: #3D52A0;
+    border: 2px solid #3D52A0;
+}
+div.button_submit input:hover {
+    background-color : #3D52A0;
+    color : #EDE8F5;
+}

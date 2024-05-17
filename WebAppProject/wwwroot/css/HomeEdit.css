@@ -11,34 +11,34 @@ div.side_2 {
     width: 35%;
 }
 div.fullname label {
-    color: #3D52A0;
+    color: red;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 div.phone label {
-    color: #3D52A0;
+    color: red;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 div.address label {
-    color: #3D52A0;
+    color: red;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 div.country label {
-    color: #3D52A0;
+    color: red;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 div.city label {
-    color: #3D52A0;
+    color: red;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 div.birthdate label {
-    color: #3D52A0;
+    color: red;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 div.button_submit input {
     background-color: #EDE8F5;

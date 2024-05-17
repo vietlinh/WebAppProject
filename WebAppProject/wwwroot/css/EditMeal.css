@@ -16,7 +16,7 @@ div.nav_bar_list ul li a:hover {
 }
 div.nav_bar_list ul {
     list-style-type: none;
-    margin-top : 1rem;
+    margin-top : 1.5rem;
 }
 div.nav_bar_list ul li {
     display: inline-block;
