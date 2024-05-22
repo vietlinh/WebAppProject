@@ -1,0 +1,62 @@
+﻿@model WebAppProject.ViewModels.CreateUserVM
+
+<link rel="stylesheet" href="~/css/Create_Acc.css" asp-append-version="true" />
+<div>
+    <div class="register_form">
+        <h5>Tạo tài khoản</h5>
+        <form id="registerForm" asp-controller="Home" asp-action="Create_Acc" method="post">
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                <label asp-for="Email" class="form-label">Email</label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="FullName" class="form-control" autocomplete="username" aria-required="true" placeholder="Họ và tên" />
+                <label asp-for="FullName" class="form-label">Họ và tên</label>
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="DateBirth" class="form-control" autocomplete="username" aria-required="true" placeholder="Ngày tháng năm sinh" />
+                <label asp-for="DateBirth" class="form-label">Ngày tháng năm sinh</label>
+                <span asp-validation-for="DateBirth" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Phone" class="form-control" autocomplete="username" aria-required="true" placeholder="Số điện thoại" />
+                <label asp-for="Phone" class="form-label">Số điện thoại</label>
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Address" class="form-control" autocomplete="username" aria-required="true" placeholder="Địa chỉ" />
+                <label asp-for="Address" class="form-label">Địa chỉ</label>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="City" class="form-control" autocomplete="username" aria-required="true" placeholder="Thành phố" />
+                <label asp-for="City" class="form-label">Thành phố</label>
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Country" class="form-control" autocomplete="username" aria-required="true" placeholder="Quốc gia" />
+                <label asp-for="Country" class="form-label">Quốc gia</label>
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="PassWord" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Mật khẩu" />
+                <label asp-for="PassWord" class="form-label">Mật khẩu</label>
+                <span asp-validation-for="PassWord" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="ConfirmPassWord" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Xác nhận mật khẩu" />
+                <label asp-for="ConfirmPassWord" class="form-label">Xác nhận mật khẩu</label>
+                <span asp-validation-for="ConfirmPassWord" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Đăng ký</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

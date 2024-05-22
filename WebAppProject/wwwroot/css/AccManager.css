@@ -1,0 +1,9 @@
+﻿div.table_display {
+    padding: 25px;
+    background-color: #EDE8F5;
+    min-height: 600px;
+    border-radius : 10px;
+}
+#table_header th {
+    color : red;
+}

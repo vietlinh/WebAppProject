@@ -89,7 +89,7 @@ namespace WebAppProject.Controllers
                 await _context.SaveChangesAsync();
                 return View();
             }
-            return View(mainmeal);
+            return View();
         }
         [Authorize(Roles = "Admin")]
         public IActionResult CreateBasicMeal()
@@ -106,7 +106,7 @@ namespace WebAppProject.Controllers
                 await _context.SaveChangesAsync();
                 return View();
             }
-            return View(basicmeal);
+            return View();
         }
         [Authorize(Roles = "Admin")]
         public IActionResult CreateSideMeal()
@@ -123,7 +123,7 @@ namespace WebAppProject.Controllers
                 await _context.SaveChangesAsync();
                 return View();
             }
-            return View(sidemeal);
+            return View();
         }
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditMeal()

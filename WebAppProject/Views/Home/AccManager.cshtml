@@ -1,0 +1,50 @@
+﻿@using WebAppProject.ViewModels
+@model AccDisplayVM
+
+<link rel="stylesheet" href="~/css/AccManager.css" asp-append-version="true" />
+
+@{int i = 0;}
+<div class="table_display">
+    <table class="table table-striped">
+        <thead>
+            <tr id="table_header">
+                <th>STT</th>
+                <th>ID</th>
+                <th>FULLNAME</th>
+                <th>EMAIL</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    @{
+                        i++;
+                    }
+                    <th>@i</th>
+                    <th>@user.Id</th>
+                    <th>@user.FullName</th>
+                    <th>@user.Email</th>
+                    <th>
+                        <form asp-action="AccDelete" method="post" asp-route-id="@user.Id">
+                            <input type="submit" class="btn btn-danger" value="Xóa" onclick="return confirmAction()" />
+                        </form>
+                    </th>
+                    <th>
+                        <form asp-action="AccDetail" method="get" asp-route-id="@user.Id">
+                            <input type="submit" class="btn btn-primary" value="Chi tiết"/>
+                        </form>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function confirmAction() {
+        return confirm("Bạn chắc chắn muốn xóa không ?");
+    }
+</script>

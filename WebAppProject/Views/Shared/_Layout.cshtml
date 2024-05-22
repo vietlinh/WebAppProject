@@ -34,6 +34,15 @@
                         <ul class="dropdown-menu" id="ul_1">
                             <li><a class="dropdown-item" id="dropdown_a_1" asp-controller="Home" asp-action="Index">Thông tin</a></li>
                             <li><a class="dropdown-item" id="dropdown_a_2" asp-controller="Home" asp-action="Edit">Sửa thông tin</a></li>
+                            @{
+                                var user = await userManager.GetUserAsync(User);
+                                bool is_admin = await userManager.IsInRoleAsync(user, "Admin");
+                            }
+                            @if (is_admin)
+                            {
+                            <li><a class="dropdown-item" id="dropdown_a_3" asp-controller="Home" asp-action="Create_Acc">Tạo tài khoản</a></li>
+                            <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="Home" asp-action="AccManager">Quản lý tài khoản</a></li>
+                            }
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -42,11 +51,7 @@
                         </button>
                         <ul class="dropdown-menu" id="ul_2">
                             <li><a class="dropdown-item" id="dropdown_a_3" asp-controller="MealMenu" asp-action="Index">Xem thực đơn tuần</a></li>
-                            @{
-                                var user = await userManager.GetUserAsync(User);
-                                bool is_admin = await userManager.IsInRoleAsync(user, "Admin");
-                            }
-                            @if (is_admin == true) {
+                            @if (is_admin) {
                             <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="MealMenu" asp-action="EditMeal">Sửa thực đơn</a></li>
                             }
                         </ul>
@@ -67,11 +72,16 @@
                         <div class="link_acc">
                             <a asp-controller="Home" asp-action="Index"><i class="far fa-address-card"></i>&nbsp; Tài khoản</a>
                             <a asp-controller="Home" asp-action="Edit"><i class="far fa-edit"></i>&nbsp; Sửa thông tin</a>
+                            @if (is_admin)
+                            {
+                            <a asp-controller="Home" asp-action="Create_Acc"><i class="	fas fa-user-plus"></i>&nbsp; Tạo tài khoản</a>
+                                <a asp-controller="Home" asp-action="AccManager"><i class="	fas fa-users"></i>&nbsp; Quản lý tài khoản</a>
+                            }
                         </div>
                         <div class="link_meal">
                             <a asp-controller="MealMenu" asp-action="Index"><i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp; Thực đơn</a>
                             <br />
-                            @if (is_admin == true)
+                            @if (is_admin)
                             {
                                 <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
                                 <a asp-controller="MealMenu" asp-action="CreateBasicMeal"><i class="fas fa-bacon"></i>&nbsp; Thêm món cơ bản</a>

@@ -1,0 +1,25 @@
+﻿div.register_form {
+    width: 70%;
+    padding: 50px;
+    margin-left: 200px;
+    margin-top: 50px;
+    background-color: #EDE8F5;
+    border-radius : 10px;
+}
+div.register_form h5 {
+    margin-left: 350px;
+    color : red;
+    font-weight: 700;
+}
+#registerSubmit {
+    background-color: #EDE8F5;
+    border-color: #3D52A0;
+    color: #3D52A0;
+    border : 2px solid;
+}
+#registerSubmit:hover {
+    background-color: #3D52A0;
+    color : #EDE8F5;
+}
+
+
