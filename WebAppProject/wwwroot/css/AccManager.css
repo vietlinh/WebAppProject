@@ -7,3 +7,9 @@
 #table_header th {
     color : red;
 }
+#search_bar {
+    border-radius : 10px;
+    margin-left: 50px;
+    margin-bottom : 15px;
+    height : 35px;
+}

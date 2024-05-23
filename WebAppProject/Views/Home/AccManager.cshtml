@@ -5,7 +5,8 @@
 
 @{int i = 0;}
 <div class="table_display">
-    <table class="table table-striped">
+    <input type="text" id="search_bar" placeholder="Tìm kiếm..." />
+    <table class="table table-striped" id="table">
         <thead>
             <tr id="table_header">
                 <th>STT</th>
@@ -24,9 +25,9 @@
                         i++;
                     }
                     <th>@i</th>
-                    <th>@user.Id</th>
-                    <th>@user.FullName</th>
-                    <th>@user.Email</th>
+                    <th class="user_id">@user.Id</th>
+                    <th class="user_fullname">@user.FullName</th>
+                    <th class="user_email">@user.Email</th>
                     <th>
                         <form asp-action="AccDelete" method="post" asp-route-id="@user.Id">
                             <input type="submit" class="btn btn-danger" value="Xóa" onclick="return confirmAction()" />
@@ -47,4 +48,23 @@
     function confirmAction() {
         return confirm("Bạn chắc chắn muốn xóa không ?");
     }
+
+    document.getElementById("search_bar").addEventListener("keyup", function () {
+        var search_string = this.value.toLowerCase();
+        var row_id = document.querySelectorAll("#table tbody tr");
+        var row_fullname = document.querySelectorAll("#table tbody tr");
+        var row_email = document.querySelectorAll("#table tbody tr");
+
+    row_id.forEach(function (row) {
+        var user_id = row.querySelector(".user_id").textContent.toLowerCase();
+        var user_fullname = row.querySelector(".user_fullname").textContent.toLowerCase();
+        var user_email = row.querySelector(".user_email").textContent.toLowerCase();
+        if (user_id.includes(search_string) || user_fullname.includes(search_string) || user_email.includes(search_string)) {
+            row.style.display = '';
+        }
+        else {
+            row.style.display = "none";
+        }
+    });
+    });
 </script>
