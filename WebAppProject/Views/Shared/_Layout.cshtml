@@ -60,6 +60,29 @@
                         <input type="text" placeholder=" &nbsp;Tìm kiếm..."/>
                         <button>Tìm kiếm</button>
                     </div>
+                    <div class="time_now">
+                        @{
+                            var date = DateTime.Now;
+                            var day_of_week = date.DayOfWeek;
+                            int day = date.Day;
+                            int month = date.Month;
+                            int year = date.Year;
+                        }
+                        <div id="txt"></div>
+                        @{
+                            Dictionary<DayOfWeek, string> dayofweekVN = new Dictionary<DayOfWeek, string>
+                            {
+                                {DayOfWeek.Sunday,"Chủ Nhật"},
+                                {DayOfWeek.Monday,"Thứ Hai"},
+                                {DayOfWeek.Tuesday,"Thứ Ba"},
+                                {DayOfWeek.Wednesday,"Thứ Tư"},
+                                {DayOfWeek.Thursday,"Thứ Năm"},
+                                {DayOfWeek.Friday,"Thứ Sáu"},
+                                {DayOfWeek.Saturday,"Thứ Bảy"}
+                            };
+                         }
+                            <div id="date">@dayofweekVN[day_of_week] @day-@month-@year</div>
+                    </div>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="nav_bar">
                         <ul class="navbar-nav flex-grow-1" id="ul_nav_bar">
 
@@ -114,7 +137,24 @@
     @await RenderSectionAsync("Scripts", required: false)
 
     <script>
-        
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+            startTime();
+        });
     </script>
 </body>
 </html>

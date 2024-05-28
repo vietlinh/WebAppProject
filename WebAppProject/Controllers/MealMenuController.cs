@@ -45,6 +45,7 @@ namespace WebAppProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(RegisterMealInfo register_user)  
         {
+            var user_context = HttpContext.User;
             var user = await _userManager.GetUserAsync(HttpContext.User);
             var existingUser = _context.registerMealInfos.FirstOrDefault(u => u.Id_user == user.Id); 
 
@@ -60,17 +61,12 @@ namespace WebAppProject.Controllers
             {
                 register_user.FullName = user.FullName;
                 register_user.Id_user = user.Id;
-                _context.Add(register_user);
+                _context.registerMealInfos.Add(register_user);
             }
 
             await _context.SaveChangesAsync();
-            MealMenuVM mealmenu = new MealMenuVM();
-            mealmenu.SideMeal = await _context.sideMeals.ToListAsync();
-            mealmenu.MainMeal = await _context.mainMeals.ToListAsync();
-            mealmenu.BasicMeal = await _context.basicMeals.ToListAsync();
-            mealmenu.user_id = user.Id;
-            mealmenu.user_name = user.FullName;
-            return View(mealmenu);
+            return RedirectToAction("Index");
+            
 
         }
         [Authorize(Roles = "Admin")]

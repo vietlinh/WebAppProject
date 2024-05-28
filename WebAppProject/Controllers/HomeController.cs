@@ -140,7 +140,8 @@ namespace WebAppProject.Controllers
         public async Task<IActionResult> AccDelete(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-            if (user != null)
+            var user_role = await _userManager.GetRolesAsync(user);
+            if (user != null && !user_role.Contains("Admin"))
             {
                 await _userManager.DeleteAsync(user);
             }

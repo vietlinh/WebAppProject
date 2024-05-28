@@ -146,3 +146,16 @@ div.search_bar button:hover {
     color : #EDE8F5;
     border-color : red;
 }
+#txt {
+    display: inline-block;
+    color: #EDE8F5;
+}
+#date {
+    display: inline-block;
+    color: #EDE8F5;
+    font-size : 17px;
+}
+div.time_now {
+    margin-left : 10px;
+    font-size : 17px;
+}
