@@ -45,6 +45,11 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=MealMenu}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "editMeal",
+    pattern: "{controller=MealMenu}/{action=EditMeal}/{id?}");
+
+
 app.MapRazorPages();
 
 using(var scope = app.Services.CreateScope())
@@ -72,6 +77,7 @@ using (var scope = app.Services.CreateScope())
         user.UserName = email;
         user.Email = email;
         user.EmailConfirmed = true;
+        user.CreateTime = DateTime.Now;
 
         await userManager.CreateAsync(user, password);
 

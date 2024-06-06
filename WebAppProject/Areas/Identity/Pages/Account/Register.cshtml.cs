@@ -85,7 +85,7 @@ namespace WebAppProject.Areas.Identity.Pages.Account
             public string Phone { get; set; }
             [Required]
             [Display(Name = " " )]
-            public string DateBirth { get; set; }
+            public DateOnly DateBirth { get; set; }
             [Required]
             [Display(Name = " ")]
 

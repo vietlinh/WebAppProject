@@ -1,0 +1,8 @@
+﻿div.create_form {
+    background-color: #EDE8F5;
+    padding: 40px;
+    border-radius : 10px;
+}
+div.create_form form div{
+    margin-top : 15px;
+}

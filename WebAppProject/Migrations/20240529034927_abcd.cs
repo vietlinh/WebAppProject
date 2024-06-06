@@ -5,7 +5,7 @@
 namespace WebAppProject.Migrations
 {
     /// <inheritdoc />
-    public partial class @new : Migration
+    public partial class abcd : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

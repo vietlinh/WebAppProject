@@ -25,6 +25,9 @@ namespace WebAppProject.ViewModels
         public int wednesday_count { get; set; }
         public int thursday_count { get; set; }
         public int friday_count { get; set;}
-        
+        public int mainMeal_count { get; set; }
+        public int basicMeal_count { get; set; }
+        public int sideMeal_count { get; set; }
+        public int current_page { get; set; }
     }
 }

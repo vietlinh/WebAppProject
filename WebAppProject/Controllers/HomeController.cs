@@ -26,7 +26,6 @@ namespace WebAppProject.Controllers
             _context = context;
             _userStore = userstore;
             _emailStore = GetEmailStore(); 
-
         }
 
         public async Task<IActionResult> Index()
@@ -117,7 +116,8 @@ namespace WebAppProject.Controllers
                     Address = inputUser.Address,
                     City = inputUser.City,
                     Country = inputUser.Country,
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    CreateTime = DateTime.Now,
                 };
                 await _userStore.SetUserNameAsync(user, inputUser.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user,inputUser.Email, CancellationToken.None);
@@ -170,7 +170,8 @@ namespace WebAppProject.Controllers
                 Country = user.Country,
                 City = user.City,
                 Phone = user.Phone,
-                Address = user.Address
+                Address = user.Address,
+                CreateTime = user.CreateTime
             };
             return View(user_detail);
         }

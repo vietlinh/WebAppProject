@@ -1,34 +1,11 @@
-﻿div.nav_bar_list ul li a {
-    color: #EDE8F5;
-    font-weight: 600;
-    font-size: 18px;
-    border: 2px solid #EDE8F5;
-    border-radius: 10px;
-    text-decoration-line: none;
-    padding: 5px;
-    background-color: green;
-    transition: background-color 0.2s;
-    border-color: green;
-}
-div.nav_bar_list ul li a:hover {
-    color:  #EDE8F5 !important;
-    background-color: darkgreen !important;
-}
-div.nav_bar_list ul {
-    list-style-type: none;
-    margin-top : 1.5rem;
-}
-div.nav_bar_list ul li {
-    display: inline-block;
-    margin-left: 10px;
-}
+﻿
 div.display_number_info {
     background-color: #EDE8F5;
     display: inline-block;
     width: 35%;
     height: 250px;
     border-radius: 10px;
-    margin-left: 50px;
+    margin-left: 70px;
     vertical-align: top;
 }
 #button_deleteall {
@@ -41,49 +18,23 @@ div.display_number_info {
     transition : background-color 0.3s;
     padding-top : 3px;
     padding-bottom : 3px;
+    
 }
 #button_deleteall:hover {
     background-color: darkred;
     border-color : darkred;
     color: #EDE8F5;
 }
-
 div.nav_bar {
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
     display: inline-block;
-    height: 100px;
+    height: 150px;
     margin-top: 10px;
-    margin-left: 70px;
+    margin-left: 120px;
     background-color: #EDE8F5;
 }
-div.table_1 {
-    display: inline-block;
-    margin-left: 25%;
-    margin-top : 25px;
-    border-right: 1px black solid;
-}
-div.table_2 {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 25%;
-    margin-top: 25px;
-    border-right: 1px black solid;
-}
-div.table_3 {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 25%;
-    margin-top: 25px;
-}
-div.display_db {
-    background-color: #EDE8F5;
-    border: 1px white solid;
-    margin-top: 25px;
-    border-radius: 20px;
-    box-shadow: 1px 1px rgb(175, 175, 175, 0.25);
-    display: block;
-}
+
 #button_delete_register_all {
     background-color: red;
     border: 1px solid red;
@@ -100,5 +51,43 @@ div.display_db {
     background-color : darkred;
     border-color : darkred;
     color : white;
+}
+#mainmeal_db, #sidemeal_db, #basicmeal_db {
+    background-color: #EDE8F5;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 30px;
+}
+#mainmeal_db {
+    display : block;
+}
+form.form_page {
+    display : inline-block;
+}
+input.page_num {
+    border: none;
+    background-color: #EDE8F5;
+}
+input.page_num:hover {
+    color : red;
+}
+div.nav_bar_list_2 ul, div.nav_bar_list ul {
+    list-style-type : none;
+    margin-top : 20px;
+}
+div.nav_bar_list_2 ul {
+    margin-left : 40px;
+}
+div.nav_bar_list ul li {
+    display : inline-block;
+    margin-left : 30px;
+}
+div.nav_bar_list_2 ul li {
+    display : inline-block;
+    margin-left : 20px;
+}
+div.mainmeal_db h5 {
+    color : red;
+    margin-bottom : 10px;
 }
 

@@ -42,3 +42,6 @@ tr.table_meal td {
 #meal_table {
     min-height : 300px;
 }
+#week_selector {
+    width: 25%;
+}

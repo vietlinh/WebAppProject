@@ -7,44 +7,44 @@
     <h5>Đăng ký cơm trưa</h5>
     <p> Mã ID:  @Model.user_id</p>
     <p> Nhân viên : @Model.user_name</p>
-    <form asp-action="Index" method="post">
+    <form asp-action="Index2" method="post">
         <i class="far fa-calendar-alt"></i> &nbsp;
-    <div class="form-check form-check-inline">
-        <input asp-for="Monday" class="form-check-input" type="checkbox" id="monday" value="true" >
-        <label class="form-check-label" for="inlineCheckbox1">Thứ 2</label>
-    </div>
-    <div class="form-check form-check-inline">
-            <input asp-for="Tuesday" class="form-check-input" type="checkbox" id="tuesday" value="true" >
-        <label class="form-check-label" for="inlineCheckbox2">Thứ 3</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input asp-for="Wednesday" class="form-check-input" type="checkbox" id="wednesday" value="true">
-        <label class="form-check-label" for="inlineCheckbox1">Thứ 4</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input asp-for="Thursday" class="form-check-input" type="checkbox" id="thursday" value="true" >
-        <label class="form-check-label" for="inlineCheckbox2">Thứ 5</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input asp-for="Friday" class="form-check-input" type="checkbox" id="friday" value="true" >
-        <label class="form-check-label" for="inlineCheckbox1">Thứ 6</label>
-    </div>
-    <div class="form-check-inline">
-        <input type="submit" value="Lưu" class="btn btn-primary" id="submit_button" onclick="inform_display()" />
-    </div>
+        <div class="form-check form-check-inline">
+            <input asp-for="Monday" class="form-check-input" type="checkbox" id="monday" value="true">
+            <label class="form-check-label" for="inlineCheckbox1">Thứ 2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input asp-for="Tuesday" class="form-check-input" type="checkbox" id="tuesday" value="true">
+            <label class="form-check-label" for="inlineCheckbox2">Thứ 3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input asp-for="Wednesday" class="form-check-input" type="checkbox" id="wednesday" value="true">
+            <label class="form-check-label" for="inlineCheckbox1">Thứ 4</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input asp-for="Thursday" class="form-check-input" type="checkbox" id="thursday" value="true">
+            <label class="form-check-label" for="inlineCheckbox2">Thứ 5</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input asp-for="Friday" class="form-check-input" type="checkbox" id="friday" value="true">
+            <label class="form-check-label" for="inlineCheckbox1">Thứ 6</label>
+        </div>
+        <div class="form-check-inline">
+            <input type="submit" value="Lưu" class="btn btn-primary" id="submit_button" onclick="inform_display()" />
+        </div>
     </form>
     <div class="date_week">
         @{
             DateTime today = DateTime.Now.Date;
-            var get_day = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7 ) % 7;
+            var get_day = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
             DateTime monday_this_week = today.AddDays(-get_day);
             var sunday_this_week = monday_this_week.AddDays(6);
             var monday_next_week = monday_this_week.AddDays(7);
             var sunday_next_week = monday_next_week.AddDays(6);
         }
         <select class="form-select" id="week_selector">
-            <option value="this_week">@monday_this_week.ToString("dd/MM/yyyy") đến @sunday_this_week.ToString("dd/MM/yyyy")</option>
             <option value="next_week">@monday_next_week.ToString("dd/MM/yyyy") đến @sunday_next_week.ToString("dd/MM/yyyy")</option>
+            <option value="this_week">@monday_this_week.ToString("dd/MM/yyyy") đến @sunday_this_week.ToString("dd/MM/yyyy")</option>
         </select>
     </div>
 </div>
@@ -67,12 +67,12 @@
                 <td style="font-weight:700; color: red;">Món Chính</td>
                 <td>
                     @foreach (var meal in Model.MainMeal)
-                {
-                    if (meal.Day == "Thứ 2")
                     {
-                        <p>@meal.Name</p>
+                        if (meal.Day == "Thứ 2")
+                        {
+                            <p>@meal.Name</p>
+                        }
                     }
-                }
                 </td>
                 <td>
                     @foreach (var meal in Model.MainMeal)
@@ -124,12 +124,12 @@
                 <td style="font-weight:700; color: green;">Món phụ</td>
                 <td>
                     @foreach (var meal in Model.SideMeal)
-                {
-                    if (meal.Day == "Thứ 2")
                     {
-                        <p>@meal.Name</p>
+                        if (meal.Day == "Thứ 2")
+                        {
+                            <p>@meal.Name</p>
+                        }
                     }
-                }
                 </td>
                 <td>
                     @foreach (var meal in Model.SideMeal)
@@ -240,62 +240,22 @@
 
 
 <script>
-    var date = new Date();
-    var currentdayofweek = date.getDay();
-    if (currentdayofweek >= 1) {
-        document.getElementById("monday").disabled = true;
-    }
-    else {
-        document.getElementById("monday").disabled = false;
-    }
-    if (currentdayofweek >= 2) {
-        document.getElementById("tuesday").disabled = true;
-    }
-    else {
-        document.getElementById("tuesday").disabled = false;
-    }
-    if (currentdayofweek >= 3) {
-        document.getElementById("wednesday").disabled = true;
-    }
-    else {
-        document.getElementById("wednesday").disabled = false;
-    }
-    if (currentdayofweek >= 4) {
-        document.getElementById("thursday").disabled = true;
-    }
-    else {
-        document.getElementById("thursday").disabled = false;
-    }
-    if (currentdayofweek >= 5) {
-        document.getElementById("friday").disabled = true;
-    }
-    else {
-        document.getElementById("friday").disabled = false;
-    }
-    if (currentdayofweek == 6) {
-        document.getElementById("monday").disabled = false;
-        document.getElementById("tuesday").disabled = false;
-        document.getElementById("wednesday").disabled = false;
-        document.getElementById("thursday").disabled = false;
-        document.getElementById("friday").disabled = false;
-    }
-
+    
     function inform_display() {
         alert("Đăng ký cơm thành công !");
     }
 
-    var currentUrl = window.location.href;
     document.getElementById("week_selector").addEventListener("change", function () {
         var select_value = this.value;
         var url = "";
 
         if (select_value == "this_week") {
-            url = "@Url.Action("Index","MealMenu")";
+            url = "@Url.Action("Index", "MealMenu")";
         }
         else if ( select_value == "next_week") {
-            url = "@Url.Action("Index2","MealMenu")";
+            url = "@Url.Action("Index2", "MealMenu")";
         }
         window.location.href = url;
-     });
+    });
 
 </script>

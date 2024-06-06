@@ -19,8 +19,21 @@ public class WebAppProjectDbContext : IdentityDbContext<AppUser>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
+        builder.Entity<RegisterMealInfo>()
+            .HasOne(m => m.AppUser)
+            .WithMany(n => n.RegisterMealInfos)
+            .HasForeignKey(x => x.User_Id);
+        builder.Entity<BasicMeal>()
+            .HasOne(m => m.AppUser)
+            .WithMany(n => n.BasicMeals)
+            .HasForeignKey(x => x.Creator_id);
+        builder.Entity<SideMeal>()
+            .HasOne(m => m.AppUser)
+            .WithMany(n => n.SideMeals)
+            .HasForeignKey(x => x.Creator_id);
+        builder.Entity<MainMeal>()
+            .HasOne(m => m.AppUser)
+            .WithMany(n => n.MainMeals)
+            .HasForeignKey(x => x.Creator_id);
     }
 }

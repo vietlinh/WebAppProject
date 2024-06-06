@@ -151,4 +151,18 @@ div.button a:hover {
     background-color: #3D52A0;
     color: #EDE8F5;
 }
+div.create_date p {
+    border: 3px #3D52A0 solid;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+    color: #3D52A0;
+    font-weight: 600;
+    background-color: #EDE8F5;
+}
+div.create_date h6 {
+    color: red;
+    font-size: 18px;
+    font-weight: 700;
+}
 

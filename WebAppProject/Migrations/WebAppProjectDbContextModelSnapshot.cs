@@ -180,8 +180,11 @@ namespace WebAppProject.Migrations
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DateBirth")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateOnly?>("DateBirth")
+                        .HasColumnType("date");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -250,6 +253,12 @@ namespace WebAppProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Creator_id")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Day")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -258,7 +267,12 @@ namespace WebAppProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("week_create")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Creator_id");
 
                     b.ToTable("basicMeals");
                 });
@@ -271,6 +285,12 @@ namespace WebAppProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Creator_id")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Day")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -279,7 +299,12 @@ namespace WebAppProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("week_create")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Creator_id");
 
                     b.ToTable("mainMeals");
                 });
@@ -299,12 +324,11 @@ namespace WebAppProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Id_user")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("Monday")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime>("Register_Time")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("Thursday")
                         .HasColumnType("bit");
@@ -312,10 +336,19 @@ namespace WebAppProject.Migrations
                     b.Property<bool>("Tuesday")
                         .HasColumnType("bit");
 
+                    b.Property<string>("User_Id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<bool>("Wednesday")
                         .HasColumnType("bit");
 
+                    b.Property<string>("week_register")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("User_Id");
 
                     b.ToTable("registerMealInfos");
                 });
@@ -328,6 +361,12 @@ namespace WebAppProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Creator_id")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Day")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -336,7 +375,12 @@ namespace WebAppProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("week_create")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Creator_id");
 
                     b.ToTable("sideMeals");
                 });
@@ -390,6 +434,55 @@ namespace WebAppProject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WebAppProject.Models.BasicMeal", b =>
+                {
+                    b.HasOne("WebAppProject.Areas.Identity.Data.AppUser", "AppUser")
+                        .WithMany("BasicMeals")
+                        .HasForeignKey("Creator_id");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("WebAppProject.Models.MainMeal", b =>
+                {
+                    b.HasOne("WebAppProject.Areas.Identity.Data.AppUser", "AppUser")
+                        .WithMany("MainMeals")
+                        .HasForeignKey("Creator_id");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("WebAppProject.Models.RegisterMealInfo", b =>
+                {
+                    b.HasOne("WebAppProject.Areas.Identity.Data.AppUser", "AppUser")
+                        .WithMany("RegisterMealInfos")
+                        .HasForeignKey("User_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("WebAppProject.Models.SideMeal", b =>
+                {
+                    b.HasOne("WebAppProject.Areas.Identity.Data.AppUser", "AppUser")
+                        .WithMany("SideMeals")
+                        .HasForeignKey("Creator_id");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("WebAppProject.Areas.Identity.Data.AppUser", b =>
+                {
+                    b.Navigation("BasicMeals");
+
+                    b.Navigation("MainMeals");
+
+                    b.Navigation("RegisterMealInfos");
+
+                    b.Navigation("SideMeals");
                 });
 #pragma warning restore 612, 618
         }

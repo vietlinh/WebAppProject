@@ -1,0 +1,127 @@
+﻿@using WebAppProject.ViewModels
+@model MealMenuVM
+
+<link rel="stylesheet" href="~/css/EditMeal.css" asp-append-version="true" />
+
+<div class="nav_bar">
+    <div class="nav_bar_list">
+        <ul>
+            <li>
+                <form asp-action="DeleteAll" method="post">
+                    <input id="button_deleteall" type="submit" class="button_delete" value="Xóa tất cả danh sách món" onclick="return confirmAction()">
+                </form>
+            </li>
+            <li>
+                <form asp-action="delete_register_all" method="post">
+                    <input id="button_delete_register_all" type="submit" value="Xóa danh sách đăng ký" onclick="return confirmAction()" />
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="nav_bar_list_2">
+        <ul>
+            <li>
+                <a asp-controller="MealMenu" asp-action="EditMainMeal" class="btn btn-primary">Món chính</a>
+            </li>
+            <li>
+                <a asp-controller="MealMenu" asp-action="EditSideMeal" class="btn btn-primary">Món phụ</a>
+            </li>
+            <li>
+                <a asp-controller="MealMenu" asp-action="EditBasicMeal" class="btn btn-primary">Món cơ bản</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="display_number_info">
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div class="mainmeal_db" id="mainmeal_db">
+    <h5>Bảng món phụ</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên món</th>
+                <th>Thứ</th>
+                <th>Tuần</th>
+                <th>Thời gian tạo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model.SideMeal)
+            {
+                <tr>
+                    <th>@data.Id</th>
+                    <th>@data.Name</th>
+                    <th>@data.Day</th>
+                    <th>@data.week_create</th>
+                    <th>@data.CreateTime.ToString("dd/MM/yyyy HH:mm:ss")</th>
+                    <th>
+                        <form asp-action="SideMealDelete" asp-route-id="@data.Id" method="post">
+                            <input type="submit" value="Xóa" id="mainmeal_delete_submit" class="btn btn-danger" />
+                        </form>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="page">
+        @{
+            int current_page = Model.current_page;
+            int page_sideMeal = Model.sideMeal_count / 10 + 1;
+        }
+        @for (int i = 1; i <= page_sideMeal; i++)
+        {
+            <form asp-controller="MealMenu" asp-action="EditSideMeal" asp-route-id="@i" method="get" class="form_page" id="form_page_@i">
+                <input class="page_num" type="submit" value="@i" id="page_num_@i" />
+            </form>
+        }
+    </div>
+</div>
+
+
+<script>
+    const xValues = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6"];
+    const yValues = [@Model.monday_count, @Model.tuesday_count, @Model.wednesday_count, @Model.thursday_count, @Model.friday_count];
+    const barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+
+    new Chart("myChart", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Số lượng đăng ký cơm trưa",
+                fontColor: "red"
+            },
+            legend: {
+                labels: {
+                    fontColor: 'red'
+                }
+            }
+        }
+    });
+
+    function confirmAction() {
+        return confirm("Bạn chắc chắn muốn xóa không ?");
+    }
+
+    var pageCurrent = document.getElementById("page_num_@current_page");
+    pageCurrent.style.color = "red";
+
+
+</script>

@@ -52,7 +52,7 @@
                         <ul class="dropdown-menu" id="ul_2">
                             <li><a class="dropdown-item" id="dropdown_a_3" asp-controller="MealMenu" asp-action="Index">Xem thực đơn tuần</a></li>
                             @if (is_admin) {
-                            <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="MealMenu" asp-action="EditMeal">Sửa thực đơn</a></li>
+                            <li><a class="dropdown-item" id="dropdown_a_4" asp-controller="MealMenu" asp-action="EditMainMeal">Sửa thực đơn</a></li>
                             }
                         </ul>
                     </div>
@@ -106,10 +106,11 @@
                             <br />
                             @if (is_admin)
                             {
-                                <a asp-controller="MealMenu" asp-action="EditMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
+                                <a asp-controller="MealMenu" asp-action="EditMainMeal"><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Sửa thực đơn</a>
                                 <a asp-controller="MealMenu" asp-action="CreateBasicMeal"><i class="fas fa-bacon"></i>&nbsp; Thêm món cơ bản</a>
                                 <a asp-controller="MealMenu" asp-action="CreateSideMeal"><i class="fas fa-egg"></i>&nbsp;&nbsp;&nbsp; Thêm món phụ</a>
                                 <a asp-controller="MealMenu" asp-action="CreateMainMeal"><i class="	fas fa-pizza-slice"></i>&nbsp;&nbsp; Thêm món chính</a>
+                                <a asp-controller="MealMenu" asp-action="CreateMeal"><i class="fas fa-paste"></i>&nbsp;&nbsp; Tạo nhiều món </a>
                             }
                         </div>
                     </div>

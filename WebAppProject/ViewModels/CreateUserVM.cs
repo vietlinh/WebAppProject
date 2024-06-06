@@ -11,7 +11,7 @@ namespace WebAppProject.ViewModels
         [Required]
         public string Phone { get; set; }
         [Required]
-        public string DateBirth { get; set; }
+        public DateOnly? DateBirth { get; set; }
         [Required]
         public string Address { get; set; }
         [Required]
